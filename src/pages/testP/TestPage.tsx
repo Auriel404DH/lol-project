@@ -1,7 +1,21 @@
 import React from 'react';
+import ButtonMainPage from '../../components/sharedC/buttons/ButtonMainPage'
 
 const TestPage = () => {
-  return <div>TestPage</div>;
+
+  const str:string = 'Далее'
+
+
+  return (
+    <div className='ml-12'>
+      <div>TestPage</div>
+      <ButtonMainPage value={str}/>
+    </div>
+
+  
+  
+  
+  );
 };
 
 export default TestPage;
