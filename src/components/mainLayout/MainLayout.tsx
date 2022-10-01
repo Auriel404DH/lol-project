@@ -1,15 +1,11 @@
 import React from 'react';
 import Footer from './footer/Footer';
-import Header from './header/Header';
+// import Header from './header/Header';
 
-interface IMainLayout {
-  children: React.ReactNode;
-}
-
-const MainLayout = ({ children }: IMainLayout) => {
+const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="font-ubuntuMedium min-h-screen flex flex-col bg-mainBG">
-      <Header />
+    <div className="font-ubuntuMedium min-h-screen flex flex-col bg-mainBG text-main">
+      {/* <Header /> */}
       <div className="flex-1">{children}</div>
       <Footer />
     </div>

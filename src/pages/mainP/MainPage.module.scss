@@ -1,5 +1,29 @@
-.test {
-  @apply text-3xl text-slate-500 font-bold bg-mainBG2 rounded-3xl p-10 font-ubuntuMedium;
+.main {
+  @apply relative opacity-0;
+
+  &__helperArrow {
+    @apply z-20;
+  }
+
+  &__content {
+    @apply z-20 relative;
+
+    &_item {
+      @apply h-96 w-60;
+    }
+  }
+
+  &__bg {
+    @apply fixed z-10 top-0 right-0 left-0 w-full;
+  }
 }
 
+.opacity1 {
+  @apply opacity-100;
+  transition-duration: 2000ms;
+}
 
+.ArrowOpacity1 {
+  @apply opacity-100;
+  transition-duration: 2000ms;
+}
