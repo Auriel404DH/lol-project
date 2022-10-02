@@ -1,6 +1,7 @@
 import React from 'react';
 import bg from '../../assets/bg/lol.mp4';
 import bgLogo from '../../assets/bg/bgPhoto.jpg';
+import DialogeWindow from '../../components/sharedC/dialogeWindow/DialogeWindow';
 import { Fiora, Orn, Reketon, WarWick, Xayah, Hasage, HasagePlay } from '../../assets/characters';
 import s from './MainPage.module.scss';
 
@@ -28,6 +29,7 @@ const MainPage: React.FC = () => {
       </div>
       <div className={s.main__content}>
         <img className={s.main__content_item} src={Xayah} alt="" />
+        <DialogeWindow who='Xayha' text='ПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯ'/>
         <img className={s.main__content_item} src={Fiora} alt="" />
         <img className={s.main__content_item} src={Orn} alt="" />
         <img className={s.main__content_item} src={Reketon} alt="" />
