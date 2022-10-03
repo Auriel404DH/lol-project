@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './DialogeWindow.module.scss'
 import frame2 from '../../../assets/bg/frame2.png'
+import decor from '../../../assets/decorations/decor.png'
 
 const DialogeWindow = ({who, text}:{who:string, text:string}) => {
   
@@ -8,9 +9,16 @@ const DialogeWindow = ({who, text}:{who:string, text:string}) => {
     <div className={styles.wrapper}>
       <div className={styles.border}>
         <div className={styles.window}>
-          <img className={styles.img} src={frame2} alt="" />
+          <img className={styles.img} src={frame2} alt="LOL" />
+          <img className={`${styles.decorImg} ${styles.decorImgTR}`} src={decor} alt="Декор" />
+          <img className={`${styles.decorImg} ${styles.decorImgTL}`} src={decor} alt="Декор" />
+          <img className={`${styles.decorImg} ${styles.decorImgBR}`} src={decor} alt="Декор" />
+          <img className={`${styles.decorImg} ${styles.decorImgBL}`} src={decor} alt="Декор" />
           <h2 className={styles.name}>{who}</h2>
-          <p className={styles.text}>{text}</p>
+          <div className={styles.window__textArea}>
+            <p className={styles.text}>{text}</p>
+          </div>
+
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ const MainPage: React.FC = () => {
       </div>
       <div className={s.main__content}>
         <img className={s.main__content_item} src={Xayah} alt="" />
-        <DialogeWindow who='Xayha' text='ПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯПЕРЬЯ'/>
+        <DialogeWindow who='Шая' text='Хей-хей! Давай, веселей!'/>
         <img className={s.main__content_item} src={Fiora} alt="" />
         <img className={s.main__content_item} src={Orn} alt="" />
         <img className={s.main__content_item} src={Reketon} alt="" />
