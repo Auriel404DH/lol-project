@@ -14,12 +14,16 @@
   }
 }
 
-.opacity1 {
-  @apply opacity-100;
-  transition-duration: 2000ms;
+.checkPoint {
+  @apply my-checkpoint border w-fit;
 }
 
-.ArrowOpacity1 {
+.opacity1 {
   @apply opacity-100;
-  transition-duration: 2000ms;
+  transition-duration: 1000ms;
+}
+
+.opacity0 {
+  @apply opacity-0;
+  transition-duration: 1000ms;
 }

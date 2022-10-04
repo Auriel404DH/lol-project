@@ -1,5 +1,6 @@
 .item {
-  @apply flex flex-col w-full fixed bottom-3 z-30;
+  @apply flex flex-col w-full fixed bottom-3 z-30 opacity-0;
+  transition-duration: 300ms;
 
   &_left {
     @apply h-photo w-96 relative top-20 left-36;
@@ -9,4 +10,14 @@
     @apply h-photo w-96 relative top-20;
     left: 1000px;
   }
+}
+
+.opacity1 {
+  @apply opacity-100;
+  transition-duration: 300ms;
+}
+
+.opacity0 {
+  @apply opacity-0;
+  transition-duration: 300ms;
 }
