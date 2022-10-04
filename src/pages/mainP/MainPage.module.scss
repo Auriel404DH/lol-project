@@ -7,10 +7,6 @@
 
   &__content {
     @apply z-20 relative;
-
-    &_item {
-      @apply h-96 w-60;
-    }
   }
 
   &__bg {

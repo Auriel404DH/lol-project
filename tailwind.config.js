@@ -15,6 +15,13 @@ module.exports = {
         mainBG: '#10041c',
         mainBG2: '#170b2a',
       },
+      margin: {
+        max: '790px',
+        checkpoint: '98px',
+      },
+      height: {
+        photo: '500px',
+      },
     },
   },
   plugins: [],

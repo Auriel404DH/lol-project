@@ -1,0 +1,12 @@
+.item {
+  @apply flex flex-col w-full fixed bottom-3 z-30;
+
+  &_left {
+    @apply h-photo w-96 relative top-20 left-36;
+  }
+
+  &_right {
+    @apply h-photo w-96 relative top-20;
+    left: 1000px;
+  }
+}
