@@ -1,0 +1,30 @@
+.main {
+  @apply relative opacity-0;
+}
+.main__helperArrow {
+  @apply z-20;
+}
+.main__content {
+  @apply z-20 relative;
+}
+.main__bg {
+  @apply fixed z-10 top-0 right-0 left-0 w-full;
+}
+
+.checkPoint {
+  @apply my-checkpoint border w-fit;
+}
+
+.opacity1 {
+  @apply opacity-100;
+  -webkit-transition-duration: 1000ms;
+       -o-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+}
+
+.opacity0 {
+  @apply opacity-0;
+  -webkit-transition-duration: 1000ms;
+       -o-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+}

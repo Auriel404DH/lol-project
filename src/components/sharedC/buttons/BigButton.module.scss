@@ -1,0 +1,64 @@
+.wrapper {
+
+    &__btn {
+        display: inline-block;
+        position: relative;
+        padding: 80px 80px 10px;
+        color: white;
+        border: 4px solid #957d00;
+        letter-spacing: 2px;
+        font-size: 20px;
+        background: linear-gradient(45deg, rgb(7, 128, 147), rgb(9, 155, 177), rgba(11, 198, 227, 1));
+        transition: 0.2s;
+        &:hover {
+            animation: bg 0.5s infinite;
+            font-weight: 700;
+            text-shadow: 0px 0px 20px rgb(180, 180, 180);
+            box-shadow: inset 0px 0px 10px #8b7a24;
+        }
+        &:active .wrapper__img,&:active .btn__value{
+            visibility: hidden;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+$white1: rgba(157, 216, 227,1);
+$white2: rgba(188, 229, 236,1);
+$white3: rgba(213, 234, 237,1);
+@keyframes bg {
+    0% {
+        background: linear-gradient(90deg, rgb(7, 128, 147), rgb(9, 155, 177), rgba(11, 198, 227, 1),rgb(51, 211, 236), rgb(68, 216, 239), rgb(95, 225, 246));
+    }
+    11.1111%{
+        background: linear-gradient(90deg, $white1, rgb(9, 155, 177), rgba(11, 198, 227, 1),rgb(51, 211, 236), rgb(68, 216, 239), rgb(95, 225, 246));
+    }
+    22.2222% {
+        background: linear-gradient(90deg, $white2, $white1, rgb(11, 198, 227),rgb(51, 211, 236), rgb(68, 216, 239), rgb(95, 225, 246));
+    }
+    33.3333% {
+        background: linear-gradient(90deg, $white3, $white2, $white1, rgb(51, 211, 236), rgb(68, 216, 239), rgb(95, 225, 246));
+    }
+    44.4444% {
+        background: linear-gradient(90deg, rgb(7, 128, 147), $white3, $white2, $white1, rgb(68, 216, 239), rgb(95, 225, 246));
+    }
+    55.5555% {
+        background: linear-gradient(90deg, rgb(7, 128, 147), rgb(9, 155, 177), $white3,$white2, $white1, rgb(95, 225, 246));
+    }
+    66.6666% {
+        background: linear-gradient(90deg, rgb(7, 128, 147), rgb(9, 155, 177), rgba(11, 198, 227, 1), $white3, $white2, $white1);
+    }
+    77.7777% {
+        background: linear-gradient(90deg, rgb(7, 128, 147), rgb(9, 155, 177), rgba(11, 198, 227, 1), rgb(51, 211, 236), $white3, $white2);
+    }
+    88.8888% {
+        background: linear-gradient(90deg, rgb(7, 128, 147), rgb(9, 155, 177), rgba(11, 198, 227, 1), rgb(51, 211, 236), rgb(68, 216, 239), $white3);
+    }
+    100% {
+        background: linear-gradient(90deg, rgb(7, 128, 147), rgb(9, 155, 177), rgba(11, 198, 227, 1),rgb(51, 211, 236), rgb(68, 216, 239), rgb(95, 225, 246));
+    }
+}
