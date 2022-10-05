@@ -108,6 +108,7 @@ const MainPage: React.FC = () => {
       />
 
       <DialogPerson
+        isLast={true}
         isView={inView7}
         left={true}
         person={Hasage}

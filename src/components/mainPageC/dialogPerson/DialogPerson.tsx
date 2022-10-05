@@ -10,6 +10,7 @@ const DialogPerson = ({
   left,
   isView,
   isNextView,
+  isLast,
 }: {
   person: string;
   name: string;
@@ -17,9 +18,15 @@ const DialogPerson = ({
   left: boolean;
   isView: boolean;
   isNextView?: boolean;
+  isLast?: boolean;
 }) => {
   return (
-    <div className={cl({ [s.item]: true, [s.opacity1]: isView && !isNextView })}>
+    <div
+      className={cl({
+        [s.item]: true,
+        [s.opacity1]: isView && !isNextView,
+      })}
+    >
       <img className={cl({ [s.item_left]: left, [s.item_right]: !left })} src={person} alt="" />
       <DialogeWindow who={name} text={text} />
     </div>
