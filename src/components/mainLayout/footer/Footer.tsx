@@ -1,4 +1,5 @@
 import React from 'react';
+import BigButton from '../../sharedC/buttons/BigButton';
 
 const Footer = () => {
   return (
