@@ -1,21 +1,13 @@
 .main {
   @apply relative opacity-0;
 
-  &__helperArrow {
-    @apply z-20;
-  }
-
   &__content {
-    @apply z-20 relative;
+    @apply z-30 relative;
   }
 
   &__bg {
-    @apply fixed z-10 top-0 right-0 left-0 w-full;
+    @apply fixed z-20 top-0 right-0 left-0 w-full;
   }
-}
-
-.checkPoint {
-  @apply my-checkpoint border w-fit;
 }
 
 .opacity1 {

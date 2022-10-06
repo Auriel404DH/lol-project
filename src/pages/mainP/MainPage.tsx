@@ -5,6 +5,7 @@ import { Fiora, Orn, Reketon, WarWick, Xayah, Hasage, HasagePlay } from '../../a
 import DialogPerson from '../../components/mainPageC/dialogPerson/DialogPerson';
 import { useInView } from 'react-intersection-observer';
 import s from './MainPage.module.scss';
+import CheckPoints from '../../components/mainPageC/checkpoints/CheckPoints';
 
 const Sentences = {
   Fiora: {
@@ -45,6 +46,8 @@ const MainPage: React.FC = () => {
   const { ref: ref5, inView: inView5 } = useInView();
   const { ref: ref6, inView: inView6 } = useInView();
   const { ref: ref7, inView: inView7 } = useInView();
+
+  const refs = [ref1, ref2, ref3, ref4, ref5, ref6, ref7];
 
   React.useEffect(() => {
     const bg = document.querySelector('#bg');
@@ -117,14 +120,8 @@ const MainPage: React.FC = () => {
       />
 
       <div className={s.main__content}>
-        <div className="mt-max border w-fit" />
-        <div ref={ref1} className={s.checkPoint} />
-        <div ref={ref2} className={s.checkPoint} />
-        <div ref={ref3} className={s.checkPoint} />
-        <div ref={ref4} className={s.checkPoint} />
-        <div ref={ref5} className={s.checkPoint} />
-        <div ref={ref6} className={s.checkPoint} />
-        <div ref={ref7} className={s.checkPoint} />
+        <div className="mt-max opacity-0 border w-fit" />
+        <CheckPoints checkPoints={refs} />
       </div>
 
       <video loop className={s.main__bg} preload="auto" poster={bgLogo} autoPlay muted>
