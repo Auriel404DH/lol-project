@@ -120,7 +120,7 @@ const MainPage: React.FC = () => {
       />
 
       <div className={s.main__content}>
-        <div className="mt-max opacity-0 border w-fit" />
+        <div className="mt-max opacity-0 border" />
         <CheckPoints checkPoints={refs} />
       </div>
 

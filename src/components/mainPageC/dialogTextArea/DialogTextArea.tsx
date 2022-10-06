@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './DialogeWindow.module.scss';
 import frame2 from '../../../assets/bg/frame2.png';
 import decor from '../../../assets/decorations/decor.png';
+import WavyText from '../../sharedC/wavyText/WavyText';
 
 const DialogeWindow = ({ who, text }: { who: string; text: string }) => {
   return (
@@ -14,7 +15,9 @@ const DialogeWindow = ({ who, text }: { who: string; text: string }) => {
         <img className={`${styles.decorImg} ${styles.decorImgBL}`} src={decor} alt="Декор" />
         <h2 className={styles.name}>{who}</h2>
         <div className={styles.window__textArea}>
-          <p className={styles.text}>{text}</p>
+          <p className={styles.text}>
+            <WavyText value={text} />
+          </p>
         </div>
       </div>
     </div>

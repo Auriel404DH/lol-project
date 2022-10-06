@@ -18,13 +18,13 @@
 .opacity1 {
   @apply opacity-100;
   -webkit-transition-duration: 1000ms;
-       -o-transition-duration: 1000ms;
-          transition-duration: 1000ms;
+  -o-transition-duration: 1000ms;
+  transition-duration: 1000ms;
 }
 
 .opacity0 {
   @apply opacity-0;
   -webkit-transition-duration: 1000ms;
-       -o-transition-duration: 1000ms;
-          transition-duration: 1000ms;
+  -o-transition-duration: 1000ms;
+  transition-duration: 1000ms;
 }

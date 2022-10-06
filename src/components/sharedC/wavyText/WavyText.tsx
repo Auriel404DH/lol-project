@@ -1,13 +1,31 @@
 import React from 'react';
-import { text } from 'stream/consumers';
-import styles from './WavyText.module.scss';
+import s from './WavyText.module.scss';
+import cl from 'classnames';
 
 const WavyText = ({ value }: { value: string }) => {
-  const find = document.querySelectorAll('.' + value);
-  find.forEach((el) => {
-    console.log('fff');
-  });
-  return true;
+  const [animated, setAnimated] = React.useState<boolean>(true);
+
+  const abc = value.split('');
+
+  return (
+    <>
+      {abc.map((e, i) => {
+        setTimeout(() => {
+          setAnimated(!animated);
+        }, 1000);
+
+        return (
+          <div
+            id="#elem"
+            key={`${e}_${i}`}
+            className={cl({ [s.text]: true, [s.textAnimated]: animated })}
+          >
+            {e}
+          </div>
+        );
+      })}
+    </>
+  );
 };
 
 export default WavyText;

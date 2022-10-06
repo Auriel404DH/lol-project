@@ -1,0 +1,7 @@
+.text {
+  @apply text-slate-200 inline-block w-fit font-ubuntuBold  duration-1000;
+}
+
+.textAnimated {
+  @apply animate-bounce;
+}
