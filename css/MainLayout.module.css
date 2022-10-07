@@ -1,7 +1,0 @@
-::-webkit-scrollbar {
-  width: 0px;
-}
-
-.main {
-  @apply font-ubuntuMedium min-h-screen flex flex-col bg-mainBG text-main;
-}
