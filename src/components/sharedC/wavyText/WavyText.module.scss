@@ -1,7 +1,23 @@
-.text {
-  @apply text-slate-200 inline-block w-fit font-ubuntuBold  duration-1000;
-}
+// .text {
+//   @apply text-slate-200 inline-block w-fit font-ubuntuBold  duration-1000;
+// }
 
-.textAnimated {
-  @apply animate-bounce;
+// .textAnimated {
+//   @apply animate-bounce;
+// }
+.span {
+  animation: wavytext 1s ease-in-out infinite;
+  position: relative;
+  top: 0px;
+}
+@keyframes wavytext {
+  0%{
+    top: 0px;
+  }
+  50%{
+    top: -6px;
+  }
+  100%{
+    top: 0;
+  }
 }
