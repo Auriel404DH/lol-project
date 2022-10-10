@@ -2,10 +2,10 @@ import React from 'react';
 import bg from '../../assets/bg/lol.mp4';
 import bgLogo from '../../assets/bg/bgPhoto.jpg';
 import { Fiora, Orn, Reketon, WarWick, Xayah, Hasage, HasagePlay } from '../../assets/characters';
-import DialogPerson from '../../components/mainPageC/dialogPerson/DialogPerson';
+import { CheckPoints, DialogPerson } from '../../components/mainPageC';
 import { useInView } from 'react-intersection-observer';
+import { NAMES } from '../../models/MainPage';
 import s from './MainPage.module.scss';
-import CheckPoints from '../../components/mainPageC/checkpoints/CheckPoints';
 
 const Sentences = {
   Fiora: {
@@ -27,16 +27,6 @@ const Sentences = {
     first: 'хей',
   },
 };
-
-enum NAMES {
-  Fiora = 'Fiora',
-  Orn = 'Orn',
-  Reketon = 'Reketon',
-  WarWick = 'WarWick',
-  Xayah = 'Xayah',
-  Hasage = 'Hasage',
-  HasagePlay = 'Hasage (playing)',
-}
 
 const MainPage: React.FC = () => {
   const { ref: ref1, inView: inView1 } = useInView();
