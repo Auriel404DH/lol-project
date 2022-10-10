@@ -6,7 +6,7 @@ const WavyText = ({ value }: { value: string }) => {
   return (
     <>
       {mas.map((el,idx) => {
-        return <span className={s.span} style={{animationDelay: idx/25+"s"}} key={idx}>{el}</span> 
+        return <span className={s.span} style={{animationDelay: idx/25+"s"}} key={idx}>{el}</span>
       })}
     </>
   );
