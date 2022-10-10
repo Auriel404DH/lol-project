@@ -1,7 +1,7 @@
-import React from 'react';
-import ButtonMainPage from '../../components/sharedC/buttons/ButtonMainPage';
-import DialogeWindow from '../../components/mainPageC/dialogTextArea/DialogTextArea';
-import BigButton from '../../components/sharedC/buttons/BigButton';
+// import React from 'react';
+// import ButtonMainPage from '../../components/sharedC/buttons/ButtonMainPage';
+// import DialogeWindow from '../../components/mainPageC/dialogTextArea/DialogTextArea';
+// import BigButton from '../../components/sharedC/buttons/BigButton';
 import QuizQuestion from '../../components/sharedC/quizQuestion/QuizQuestion';
 import WavyText from '../../components/sharedC/wavyText/WavyText';
 import SlowAppearText from '../../components/sharedC/slowAppearText/SlowAppearText';
