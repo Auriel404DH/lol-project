@@ -1,8 +1,13 @@
 .span {
    opacity: 0;
+   animation: SlowAppearText 0.04s ease-in forwards,wavytext 1s ease-in-out infinite;
+   position: relative;
+   top: 0px;
+}
+.spann {
+    opacity: 0;
    animation: SlowAppearText 0.04s ease-in forwards;
-  }
-
+}
 
   @keyframes SlowAppearText {
     0% {
@@ -10,6 +15,17 @@
     }
     100% {
         opacity: 1;
+    }
+  }
+  @keyframes wavytext {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: -6px;
+    }
+    100% {
+      top: 0;
     }
   }
   

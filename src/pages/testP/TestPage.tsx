@@ -5,15 +5,14 @@
 import QuizQuestion from '../../components/sharedC/quizQuestion/QuizQuestion';
 import WavyText from '../../components/sharedC/wavyText/WavyText';
 import SlowAppearText from '../../components/sharedC/slowAppearText/SlowAppearText';
-import { TRUE } from 'sass';
+import { TRUE, Value } from 'sass';
 
 const TestPage = () => {
   return (
     <div className="ml-12">
       <div>TestPage</div>
-      <QuizQuestion />
-       <WavyText value='Этот текст - волна'/> <br/>
-      <SlowAppearText value='ffffffffff' wavy={true}/>
+       <WavyText value='Этот текст - волна'/><br/>
+       <SlowAppearText value='ТекстТекстТекстТекстТекст' wavy={true}/>
     </div>
   );
 };
