@@ -1,22 +1,48 @@
 [
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} },
-  { "question": "", "answers": {} }
+  {
+    "question": "Твое оружие это...",
+    "answers": [
+      "Катана/Сабля/Меч/Клинки",
+      "Колдовство/проклятья",
+      "Моя верная армия",
+      "Мое тело",
+      "Моя защита"
+    ]
+  },
+  {
+    "question": "Твой любимый напиток это...",
+    "answers": [
+      "Древнее вино",
+      "Лимонад",
+      "Слезы врагов",
+      "Текущий в лесу ручей",
+      "Все то, что жидкое"
+    ]
+  },
+  {
+    "question": "В игре важно(важен)...",
+    "answers": [
+      "Личная победа",
+      "Общий результат",
+      "Общение с командой/веселье",
+      "Эстетическое наслаждение персонажами"
+    ]
+  },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] },
+  { "question": "", "answers": [] }
 ]
