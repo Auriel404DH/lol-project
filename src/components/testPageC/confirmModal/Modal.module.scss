@@ -1,0 +1,15 @@
+.wrapper {
+  @apply absolute mx-auto left-0 right-0 text-center border-4 border-mainBorder bg-mainBG2 w-fit p-6 rounded-lg;
+}
+
+.text {
+  @apply text-2xl;
+}
+
+.attention {
+  @apply mt-5 text-xs;
+}
+
+.buttons {
+  @apply flex justify-between mt-1;
+}

@@ -1,0 +1,10 @@
+.btn-back {
+  @apply flex w-fit m-1 items-center cursor-pointer text-xl bg-main rounded-lg border border-mainBorder text-amber-50 p-2;
+  transition: background-color 0.4s, color 0.4s;
+  &:hover {
+    @apply text-main bg-amber-50;
+  }
+  &:active {
+    transform: scale(105%);
+  }
+}

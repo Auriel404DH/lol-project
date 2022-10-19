@@ -1,60 +1,12 @@
 .frame {
-    padding: 40px 50px;
-    max-width: 600px;
-    background:rgb(241, 239, 239);
-    border: 3px solid #957d00;
-    position: relative;
-    &__content-text {
-        text-align: center;
-    }
-    &__list {
-        margin-bottom: 20px;
-    }
+  @apply mx-auto mt-24 w-4/6 h-4/6 rounded-md border-2 border-mainBorder relative py-10 px-14 bg-slate-50;
+  &__content-text {
+    text-align: start;
+  }
+  &__list {
+    @apply mb-6 grid mx-auto grid-flow-col w-fit gap-4 items-center;
+  }
 }
 .question {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 30px;
-}
-.answer {
-    margin-bottom: 5px;
-    text-align: center;
-    &:last-child {
-        margin-bottom: 0;
-    }
-    span {
-        border: 2px solid #c0a20b;
-        border-radius: 8px;
-        display: inline-block;
-        font-size: 20px;
-        cursor: pointer;
-        padding: 4px;
-        transition: 0.2s;
-        &:hover {
-            transform: scale(110%) 
-        }
-        &:active {
-            transform: scale(120%)
-        }
-    }
-    
-}
-.btn-back {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 20px;
-    background-color: #957d00;
-    border-radius: 8px;
-    color: white;
-    padding: 5px;
-    transition: background-color .4s,color .4s;;
-    &:hover {
-        background-color: white;
-        color: #957d00;
-        border: 2px solid #c0a20b;
-        padding: 3px;
-    }
-    &:active{
-        transform: scale(105%);
-    }
+  @apply text-center mb-5 text-3xl;
 }

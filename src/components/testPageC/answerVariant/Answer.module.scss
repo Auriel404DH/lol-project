@@ -1,0 +1,21 @@
+.answer {
+    text-align: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      border: 2px solid #c0a20b;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px;
+      transition: 0.2s;
+      &:hover {
+        transform: scale(110%);
+      }
+      &:active {
+        transform: scale(110%);
+      }
+    }
+  }
