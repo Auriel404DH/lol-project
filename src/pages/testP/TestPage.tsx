@@ -5,13 +5,15 @@ import questions from '../../questions.json';
 const TestPage = () => {
   const [step, setStep] = React.useState<number>(0);
 
-  const questionsTitle = questions.map((el) => el.question);
-  const questionAnswers = questions.map((el) => el.answers);
+  const questionsTitle: string[] = questions.map((el) => el.question);
+  const questionAnswers: string[][] = questions.map((el) => el.answers);
+  const questionsCount: number = questionsTitle.length;
 
   return (
     <div className="flex-1 flex">
       <div>qwe</div>
       <FrameForTest
+        questionsCount={questionsCount}
         questionsTitle={questionsTitle}
         questionsAnswers={questionAnswers}
         step={step}

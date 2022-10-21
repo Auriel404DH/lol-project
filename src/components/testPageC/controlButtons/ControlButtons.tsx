@@ -4,7 +4,6 @@ import RestartIcon from '../../sharedC/icons/RestartIcon';
 
 const ControlButtons = ({ previousStep, showModal, setShowModal, step }: IControlButtons) => {
   const toggleModal = () => setShowModal(!showModal);
-
   const backStep = step !== 0 ? previousStep : undefined;
 
   return (

@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import testSlice from './slices/testSlice';
+import charactersSlice from './slices/charactersSlice';
 
 const store = configureStore({
   reducer: {
-    todos: testSlice,
+    characters: charactersSlice,
   },
 });
 

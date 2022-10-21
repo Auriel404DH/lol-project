@@ -16,7 +16,7 @@ const LeftArrow = ({ width, height }: IIcon) => {
           <path
             d="M 90 90 V 0 L 0 45 L 90 90 z"
             transform=" matrix(1 0 0 1 0 0) "
-            stroke-linecap="round"
+            strokeLinecap="round"
           />
         </g>
       </svg>

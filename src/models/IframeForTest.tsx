@@ -3,4 +3,5 @@ export interface IframeForTest {
   questionsTitle: string[];
   questionsAnswers: string[][];
   setStep: React.Dispatch<React.SetStateAction<number>>;
+  questionsCount: number;
 }
