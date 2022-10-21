@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './DialogeWindow.module.scss';
 import frame2 from '../../../assets/bg/frame2.png';
 import decor from '../../../assets/decorations/decor.png';

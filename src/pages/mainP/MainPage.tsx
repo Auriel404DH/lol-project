@@ -5,28 +5,8 @@ import { Fiora, Orn, Reketon, WarWick, Xayah, Hasage, HasagePlay } from '../../a
 import { CheckPoints, DialogPerson } from '../../components/mainPageC';
 import { useInView } from 'react-intersection-observer';
 import { NAMES } from '../../models/MainPage';
+import Sentences from '../../Sentences.json';
 import s from './MainPage.module.scss';
-
-const Sentences = {
-  Fiora: {
-    first: 'хей',
-  },
-  Orn: {
-    first: 'хей',
-  },
-  Reketon: {
-    first: 'хей',
-  },
-  WarWick: {
-    first: 'хей',
-  },
-  Xayah: {
-    first: 'хей',
-  },
-  Hasage: {
-    first: 'хей',
-  },
-};
 
 const MainPage: React.FC = () => {
   const { ref: ref1, inView: inView1 } = useInView();

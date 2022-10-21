@@ -14,6 +14,7 @@ const FrameForTest = ({
   questionsAnswers,
   questionsCount,
 }: IframeForTest) => {
+  
   const dispatch = useAppDispatch();
   const [showModal, setShowModal] = React.useState<boolean>(false);
 
