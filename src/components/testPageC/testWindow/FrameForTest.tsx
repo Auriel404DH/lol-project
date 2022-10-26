@@ -12,6 +12,7 @@ const FrameForTest = ({
   setStep,
   questionsTitle,
   questionsAnswers,
+  questionId,
   questionsCount,
 }: IframeForTest) => {
   const dispatch = useAppDispatch();
@@ -31,14 +32,14 @@ const FrameForTest = ({
   return (
     <div className={s.frame}>
       <div className={s.frame__content}>
-        <h2 className={s.question}>{questionsTitle[step]}</h2>
+        <h2 className={s.question}>{questionsTitle}</h2>
         <div className={s.frame__counter}>
           {step}/{questionsCount}
         </div>
         <div className={s['frame__content-text']}>
           <ul className={s.frame__list}>
-            {questionsAnswers[step].map((el, i) => (
-              <AnswerVariant el={el} i={i} nextStep={nextStep} />
+            {questionsAnswers.map((el, i) => (
+              <AnswerVariant el={el} i={i} nextStep={nextStep} questionId={questionId}/>
             ))}
           </ul>
 

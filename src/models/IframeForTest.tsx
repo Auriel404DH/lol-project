@@ -2,8 +2,9 @@ import { questionAnswersType } from './types';
 
 export interface IframeForTest {
   step: number;
-  questionsTitle: string[];
+  questionId: number;
+  questionsTitle: string;
   questionsAnswers: questionAnswersType[];
-  setStep: React.Dispatch<React.SetStateAction<number>>;
+  setStep: (step: number) => void;
   questionsCount: number;
 }

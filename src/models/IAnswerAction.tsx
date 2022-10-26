@@ -1,5 +1,6 @@
+import { questionAnswersType } from "./types";
+
 export interface IActionAnswer {
-  questionId: string | number;
-  answerId: string | boolean;
-  answerText: string;
+  answer: questionAnswersType;
+  questionId: number;
 }

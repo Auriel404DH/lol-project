@@ -1,12 +1,10 @@
+import { questionAnswersType } from './../../models/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IActionAnswer } from '../../models/IAnswerAction';
 
 type Answer = {
   questionId: string | number;
-  answer: {
-    answerId: string | boolean;
-    answerText: string;
-  };
+  answer: questionAnswersType;
 };
 
 type InitialState = {
@@ -22,15 +20,7 @@ export const AnswerSlice = createSlice({
   initialState,
   reducers: {
     addAnswer: (state, action: PayloadAction<IActionAnswer>) => {
-      state.answers.push({
-        questionId: action.payload.questionId,
-        // [action.payload.param]: action.payload.answerId,
-
-        answer: {
-          answerId: action.payload.answerId,
-          answerText: action.payload.answerText,
-        },
-      });
+      state.answers.push({questionId: action.payload.questionId, answer: action.payload.answer});
     },
     removeAnswers: (state) => {
       state.answers = [];

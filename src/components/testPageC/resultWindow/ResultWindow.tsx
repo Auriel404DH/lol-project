@@ -6,16 +6,16 @@ import s from './Result.module.scss';
 const ResultWindow = () => {
   const dataQuestions = useAppSelector((state) => state.characters.answers);
 
-  const answers = dataQuestions.map((el) => el.answer.answerId);
+  const answers = dataQuestions.map((el) => el.answer.id);
 
   console.log(answers);
 
-  const filterCharacters = characters.filter((param) => {
-    if (param.params.agressive === answers[0]) {
-      return true;
-    }
-    return false;
-  });
+  // const filterCharacters = characters.filter((param) => {
+  //   if (param.params.agressive === answers) {
+  //     return true;
+  //   }
+  //   return false;
+  // });
 
   return (
     <div className={s.wrapper}>

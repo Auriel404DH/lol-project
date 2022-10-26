@@ -4,17 +4,17 @@ import { IAnswerVariant } from '../../../models/IAnswerVariant';
 import { addAnswer } from '../../../store/slices/charactersSlice';
 import s from './Answer.module.scss';
 
-const AnswerVariant = ({ el, i, nextStep }: IAnswerVariant) => {
+const AnswerVariant: React.FC<IAnswerVariant> = ({ el, i, questionId, nextStep }) => {
   const dispatch = useAppDispatch();
 
   const nextStepData = () => {
     nextStep();
-    dispatch(addAnswer(el));
+    dispatch(addAnswer({answer: el, questionId}));
   };
 
   return (
     <li key={`${el}_${i}`} onClick={nextStepData} className={s.answer}>
-      <span>{el}</span>
+      <span>{el.text}</span>
     </li>
   );
 };

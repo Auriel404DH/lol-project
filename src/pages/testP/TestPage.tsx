@@ -8,9 +8,9 @@ import questions from '../../questions.json';
 
 const TestPage = () => {
   const [step, setStep] = React.useState<number>(0);
-  const questionsTitle: string[] = questions.map((el) => el.question);
-  const questionAnswers: questionAnswersType[] = questions.map((el) => el.answers);
-  const questionsCount: number = questionsTitle.length;
+  const questionsTitle: string = questions[step].question;
+  const questionAnswers: questionAnswersType[] = questions[step].answers;
+  const questionsCount: number = questions.length;
 
   return (
     <div className="flex-1 flex">
@@ -20,6 +20,7 @@ const TestPage = () => {
           questionsCount={questionsCount}
           questionsTitle={questionsTitle}
           questionsAnswers={questionAnswers}
+          questionId={questions[step].id}
           step={step}
           setStep={setStep}
         />
