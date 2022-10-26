@@ -1,6 +1,7 @@
+import { questionAnswersType } from './types';
+
 export interface IAnswerVariant {
-  el: string;
+  el: questionAnswersType;
   i: number;
-  title: string;
   nextStep: () => void;
 }

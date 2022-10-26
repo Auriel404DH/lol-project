@@ -14,7 +14,6 @@ const FrameForTest = ({
   questionsAnswers,
   questionsCount,
 }: IframeForTest) => {
-  
   const dispatch = useAppDispatch();
   const [showModal, setShowModal] = React.useState<boolean>(false);
 
@@ -39,9 +38,10 @@ const FrameForTest = ({
         <div className={s['frame__content-text']}>
           <ul className={s.frame__list}>
             {questionsAnswers[step].map((el, i) => (
-              <AnswerVariant title={questionsTitle[step]} el={el} i={i} nextStep={nextStep} />
+              <AnswerVariant el={el} i={i} nextStep={nextStep} />
             ))}
           </ul>
+
           {showModal && (
             <ConfirmModal
               clearSteps={clearSteps}

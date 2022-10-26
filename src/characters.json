@@ -1,42 +1,14 @@
 [
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} },
-  { "avatar": "", "discription": "", "params": {} }
+  {
+    "avatar": "",
+    "discription": "111",
+    "params": { "agressive": true, "class": "mage" }
+  },
+
+
+
+  
+  { "avatar": "", "discription": "222", "params": { "agressive": false, "class": "mage" } },
+  { "avatar": "", "discription": "333", "params": { "agressive": true, "class": "karry" } },
+  { "avatar": "", "discription": "444", "params": { "agressive": false, "class": "karry" } }
 ]
