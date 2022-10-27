@@ -4,7 +4,7 @@ import bgLogo from '../../assets/bg/bgPhoto.jpg';
 import { Fiora, Orn, Reketon, WarWick, Xayah, Hasage, HasagePlay } from '../../assets/characters';
 import { CheckPoints, DialogPerson } from '../../components/mainPageC';
 import { useInView } from 'react-intersection-observer';
-import { NAMES } from '../../models/MainPage';
+import { NAMES } from '../../models/Enums';
 import Sentences from '../../Sentences.json';
 import s from './MainPage.module.scss';
 

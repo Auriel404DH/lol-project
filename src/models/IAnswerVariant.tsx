@@ -1,6 +1,7 @@
 export interface IAnswerVariant {
+  step: number;
   el: string;
   i: number;
-  title: string;
+  param: string | boolean;
   nextStep: () => void;
 }

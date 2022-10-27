@@ -1,19 +1,20 @@
 import React from 'react';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { IAnswerVariant } from '../../../models/IAnswerVariant';
-import { addAnswer } from '../../../store/slices/charactersSlice';
+import { addAnswer2 } from '../../../store/slices/charactersSlice';
+import { PARAMS } from '../../../models/Enums';
 import s from './Answer.module.scss';
 
-const AnswerVariant = ({ el, i, nextStep, title }: IAnswerVariant) => {
+const AnswerVariant = ({ el, i, nextStep, step, param }: IAnswerVariant) => {
   const dispatch = useAppDispatch();
 
-  const questionId: string = title;
-  const answerId: number = i;
-  const answerText: string = el;
-
   const nextStepData = () => {
+    const answerParams = {
+      param: PARAMS[step],
+      answer: param,
+    };
+    dispatch(addAnswer2(answerParams));
     nextStep();
-    dispatch(addAnswer({ questionId, answerId, answerText }));
   };
 
   return (

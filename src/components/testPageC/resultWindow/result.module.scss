@@ -1,0 +1,15 @@
+.wrapper {
+  @apply mx-auto w-4/6;
+}
+
+.entryText {
+  @apply w-full text-center;
+}
+
+.congratulations {
+  @apply text-3xl my-2 border-b-2 border-mainBorder w-fit mx-auto;
+}
+
+.yourCharacters {
+  @apply mb-2;
+}

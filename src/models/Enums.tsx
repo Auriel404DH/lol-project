@@ -7,3 +7,8 @@ export enum NAMES {
   Hasage = 'Hasage',
   HasagePlay = 'Hasage (playing)',
 }
+
+export enum PARAMS {
+  Agressive,
+  PersonClass,
+}

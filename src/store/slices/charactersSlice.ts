@@ -1,40 +1,32 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IActionAnswer } from '../../models/IAnswerAction';
-
-type Answer = {
-  questionId: string | number;
-  answer: {
-    answerId: string | number;
-    answerText: string;
-  };
-};
+import { IActionAnswer2 } from '../../models/IAnswerAction';
 
 type InitialState = {
-  character: Answer[];
+  answers2: any;
 };
 
 const initialState: InitialState = {
-  character: [],
+  answers2: {},
 };
 
 export const AnswerSlice = createSlice({
   name: 'Answer',
   initialState,
   reducers: {
-    addAnswer: (state, action: PayloadAction<IActionAnswer>) => {
-      state.character.push({
-        questionId: action.payload.questionId,
-        answer: {
-          answerId: action.payload.answerId,
-          answerText: action.payload.answerText,
-        },
-      });
+    addAnswer2: (state, action: PayloadAction<IActionAnswer2>) => {
+      const newAnswers2 = {
+        ...state.answers2,
+        [action.payload.param]: action.payload.answer,
+      };
+
+      state.answers2 = newAnswers2;
     },
+
     removeAnswers: (state) => {
-      state.character = [];
+      state.answers2 = {};
     },
   },
 });
 
-export const { addAnswer, removeAnswers } = AnswerSlice.actions;
+export const { addAnswer2, removeAnswers } = AnswerSlice.actions;
 export default AnswerSlice.reducer;

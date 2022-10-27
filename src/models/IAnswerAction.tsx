@@ -1,5 +1,4 @@
-export interface IActionAnswer {
-  questionId: string | number;
-  answerId: string | number;
-  answerText: string;
+export interface IActionAnswer2 {
+  param: string;
+  answer: string | boolean;
 }
