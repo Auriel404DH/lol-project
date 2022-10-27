@@ -4,12 +4,16 @@ import { IAnswerVariant } from '../../../models/IAnswerVariant';
 import { addAnswer } from '../../../store/slices/charactersSlice';
 import s from './Answer.module.scss';
 
-const AnswerVariant = ({ el, i, nextStep }: IAnswerVariant) => {
+const AnswerVariant = ({ el, i, nextStep, title }: IAnswerVariant) => {
   const dispatch = useAppDispatch();
+
+  const questionId: string = title;
+  const answerId: number = i;
+  const answerText: string = el;
 
   const nextStepData = () => {
     nextStep();
-    dispatch(addAnswer(el));
+    dispatch(addAnswer({ questionId, answerId, answerText }));
   };
 
   return (

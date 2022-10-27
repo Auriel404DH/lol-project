@@ -1,5 +1,5 @@
 export interface IActionAnswer {
   questionId: string | number;
-  answerId: string | boolean;
+  answerId: string | number;
   answerText: string;
 }

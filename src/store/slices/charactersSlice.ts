@@ -4,17 +4,17 @@ import { IActionAnswer } from '../../models/IAnswerAction';
 type Answer = {
   questionId: string | number;
   answer: {
-    answerId: string | boolean;
+    answerId: string | number;
     answerText: string;
   };
 };
 
 type InitialState = {
-  answers: Answer[];
+  character: Answer[];
 };
 
 const initialState: InitialState = {
-  answers: [],
+  character: [],
 };
 
 export const AnswerSlice = createSlice({
@@ -22,10 +22,8 @@ export const AnswerSlice = createSlice({
   initialState,
   reducers: {
     addAnswer: (state, action: PayloadAction<IActionAnswer>) => {
-      state.answers.push({
+      state.character.push({
         questionId: action.payload.questionId,
-        // [action.payload.param]: action.payload.answerId,
-
         answer: {
           answerId: action.payload.answerId,
           answerText: action.payload.answerText,
@@ -33,7 +31,7 @@ export const AnswerSlice = createSlice({
       });
     },
     removeAnswers: (state) => {
-      state.answers = [];
+      state.character = [];
     },
   },
 });
