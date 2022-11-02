@@ -8,8 +8,8 @@ const CheckPoints = ({ checkPoints }: { checkPoints: Array<() => void> }) => {
         return (
           <div key={`${i}_${check}`}>
             <div ref={check} className={s.checkPoint} />
-            <div className={s.checkPoint} />
-            <div className={s.checkPoint} />
+            {/* <div className={s.checkPoint} /> */}
+            {/* <div className={s.checkPoint} /> */}
           </div>
         );
       })}

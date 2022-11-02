@@ -1,10 +1,6 @@
 .main {
   @apply relative opacity-0;
 
-  &__content {
-    @apply z-30 relative;
-  }
-
   &__bg {
     @apply fixed z-20 top-0 right-0 left-0 w-full;
   }
@@ -12,10 +8,5 @@
 
 .opacity1 {
   @apply opacity-100;
-  transition-duration: 1000ms;
-}
-
-.opacity0 {
-  @apply opacity-0;
   transition-duration: 1000ms;
 }

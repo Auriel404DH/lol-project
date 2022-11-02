@@ -1,11 +1,9 @@
 import React from 'react';
-import bg from '../../assets/bg/lol.mp4';
-import bgLogo from '../../assets/bg/bgPhoto.jpg';
-import { Fiora, Orn, Reketon, WarWick, Xayah, Hasage, HasagePlay } from '../../assets/characters';
-import { CheckPoints, DialogPerson } from '../../components/mainPageC';
 import { useInView } from 'react-intersection-observer';
-import { NAMES } from '../../models/Enums';
-import Sentences from '../../Sentences.json';
+import DialogScene from '../../components/mainPageC/dialogScene/DialogScene';
+import CheckPointsComponent from '../../components/mainPageC/checkPointsComponent/CheckPointsComponent';
+import FirstScene from '../../components/mainPageC/firstScene/FirstScene';
+import BgVideo from '../../components/mainPageC/bgVideo/BgVideo';
 import s from './MainPage.module.scss';
 
 const MainPage: React.FC = () => {
@@ -18,6 +16,8 @@ const MainPage: React.FC = () => {
   const { ref: ref7, inView: inView7 } = useInView();
 
   const refs = [ref1, ref2, ref3, ref4, ref5, ref6, ref7];
+  const inViews = [inView1, inView2, inView3, inView4, inView5, inView6, inView7];
+  const isSceneOpen = inViews.some((element) => element === true);
 
   React.useEffect(() => {
     const bg = document.querySelector('#bg');
@@ -26,77 +26,10 @@ const MainPage: React.FC = () => {
 
   return (
     <div id="bg" className={s.main}>
-      <DialogPerson
-        isView={inView1}
-        isNextView={inView2}
-        left={true}
-        person={Xayah}
-        name={NAMES.Xayah}
-        text={Sentences.Xayah.first}
-      />
-
-      <DialogPerson
-        isView={inView2}
-        isNextView={inView3}
-        left={false}
-        person={Orn}
-        name={NAMES.Orn}
-        text={Sentences.Orn.first}
-      />
-
-      <DialogPerson
-        isView={inView3}
-        isNextView={inView4}
-        left={true}
-        person={WarWick}
-        name={NAMES.WarWick}
-        text={Sentences.WarWick.first}
-      />
-
-      <DialogPerson
-        isView={inView4}
-        isNextView={inView5}
-        left={false}
-        person={Reketon}
-        name={NAMES.Reketon}
-        text={Sentences.Reketon.first}
-      />
-
-      <DialogPerson
-        isView={inView5}
-        isNextView={inView6}
-        left={true}
-        person={Fiora}
-        name={NAMES.Fiora}
-        text={Sentences.Fiora.first}
-      />
-
-      <DialogPerson
-        isView={inView6}
-        isNextView={inView7}
-        left={false}
-        person={HasagePlay}
-        name={NAMES.HasagePlay}
-        text={Sentences.Hasage.first}
-      />
-
-      <DialogPerson
-        isLast={true}
-        isView={inView7}
-        left={true}
-        person={Hasage}
-        name={NAMES.Hasage}
-        text={Sentences.Hasage.first}
-      />
-
-      <div className={s.main__content}>
-        <div className="mt-max opacity-0 border" />
-        <CheckPoints checkPoints={refs} />
-      </div>
-
-      <video loop className={s.main__bg} preload="auto" poster={bgLogo} autoPlay muted>
-        <source type="video/mp4" src={bg} />
-      </video>
+      {!isSceneOpen && <FirstScene />}
+      <DialogScene inViews={inViews} />
+      <CheckPointsComponent refs={refs} />
+      <BgVideo />
     </div>
   );
 };
