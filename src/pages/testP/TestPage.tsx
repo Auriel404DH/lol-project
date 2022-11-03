@@ -12,7 +12,7 @@ const TestPage = () => {
   const questionsCount: number = questionsTitle.length;
 
   return (
-    <div className="flex-1 flex">
+    <div className="flex-1 flex z-50 relative">
       <div>qwe</div>
       {step !== questionsCount ? (
         <FrameForTest
@@ -23,7 +23,7 @@ const TestPage = () => {
           setStep={setStep}
         />
       ) : (
-        <ResultWindow />
+        <ResultWindow setStep={setStep} />
       )}
       <div>qwe</div>
     </div>

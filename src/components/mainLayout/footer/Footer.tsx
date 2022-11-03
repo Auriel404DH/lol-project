@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import s from './footer.module.scss';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const navigate = useNavigate();
 
   const navigateClick = () => {

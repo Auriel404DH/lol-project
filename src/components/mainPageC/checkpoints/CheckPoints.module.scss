@@ -1,3 +1,7 @@
 .checkPoint {
   @apply my-checkpoint opacity-0 border w-fit;
 }
+
+.checkPointLast {
+  @apply mt-checkpoint opacity-0 border w-fit;
+}

@@ -4,7 +4,7 @@ import { IDialogPerson } from '../../../models/IDialogPerson';
 import DialogTextArea from '../dialogTextArea/DialogTextArea';
 import cl from 'classnames';
 
-const DialogPerson = ({ person, name, text, left, isView, isNextView, isLast }: IDialogPerson) => {
+const DialogPerson = ({ person, name, text, left, isView, isNextView }: IDialogPerson) => {
   return (
     <div
       className={cl({

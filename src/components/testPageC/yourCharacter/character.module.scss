@@ -1,5 +1,5 @@
 .character {
-  @apply w-4/6 py-5 m-2 bg-mainBG2 rounded mx-auto;
+  @apply w-3/6 py-5 m-2 bg-mainBG2 rounded mx-auto;
 
   &__name {
     @apply text-center text-5xl font-ubuntuBold;
@@ -12,7 +12,7 @@
   &__discription {
     &_box {
       @apply bg-mainBG rounded mx-auto;
-      width: 600px;
+      width: 450px;
     }
 
     @apply text-center mx-auto mt-3 w-5/6 p-3;
@@ -20,6 +20,6 @@
 }
 
 .image {
-  width: 600px;
+  width: 450px;
   @apply mx-auto;
 }

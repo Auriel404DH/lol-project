@@ -113,3 +113,6 @@
       "Я не хочу долго изучать механики чемпиона, лучше выберу простого чемпиона"
     ]
   }
+
+
+  https://www.leagueoflegends.com/ru-ru/champions/lux/

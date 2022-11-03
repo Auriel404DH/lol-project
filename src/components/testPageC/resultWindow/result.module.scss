@@ -1,5 +1,5 @@
 .wrapper {
-  @apply mx-auto w-4/6;
+  @apply mx-auto w-4/6 pt-4 px-4 bg-mainBG min-h-screen border-x-2 border-mainBorder;
 }
 
 .entryText {
@@ -12,4 +12,16 @@
 
 .yourCharacters {
   @apply mb-2;
+}
+
+.button {
+  @apply border rounded bg-mainBG2 border-mainBorder p-2 mx-2 hover:bg-mainBG duration-500 cursor-pointer;
+
+  &__zone {
+    @apply w-3/12 justify-center flex items-center;
+  }
+}
+
+.recs {
+  @apply text-center mt-3;
 }

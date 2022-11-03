@@ -1,0 +1,8 @@
+.item {
+  @apply fixed border z-50 bottom-96 w-full flex justify-center opacity-0 duration-500;
+}
+
+.opacity1 {
+  @apply opacity-100;
+  transition-duration: 300ms;
+}
