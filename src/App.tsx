@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import MainLayout from './components/mainLayout/MainLayout';
 import { MainPage, TestPage, StoryPage } from './pages';
@@ -8,7 +8,7 @@ import store from './store';
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <MainLayout>
           <Routes>
             <Route path="/" element={<MainPage />} />
@@ -16,7 +16,7 @@ const App: React.FC = () => {
             <Route path="/story" element={<StoryPage />} />
           </Routes>
         </MainLayout>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 };
