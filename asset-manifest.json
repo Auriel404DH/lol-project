@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lol-project/static/css/main.ebacfe95.css",
-    "main.js": "/lol-project/static/js/main.c9a883e5.js",
+    "main.js": "/lol-project/static/js/main.af6c1929.js",
     "static/media/lol.mp4": "/lol-project/static/media/lol.f1669eb6b103b25448f9.mp4",
     "static/media/logoStart.png": "/lol-project/static/media/logoStart.9d45553ac27094498e16.png",
     "static/media/decor.png": "/lol-project/static/media/decor.182c5ba101fcc43f4a48.png",
@@ -24,10 +24,10 @@
     "static/media/hasageFight.png": "/lol-project/static/media/hasageFight.bffefb6ad07b425ba366.png",
     "index.html": "/lol-project/index.html",
     "main.ebacfe95.css.map": "/lol-project/static/css/main.ebacfe95.css.map",
-    "main.c9a883e5.js.map": "/lol-project/static/js/main.c9a883e5.js.map"
+    "main.af6c1929.js.map": "/lol-project/static/js/main.af6c1929.js.map"
   },
   "entrypoints": [
     "static/css/main.ebacfe95.css",
-    "static/js/main.c9a883e5.js"
+    "static/js/main.af6c1929.js"
   ]
 }
