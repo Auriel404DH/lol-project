@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/lol-project/static/css/main.ebacfe95.css",
+    "main.js": "/lol-project/static/js/main.c9a883e5.js",
+    "static/media/lol.mp4": "/lol-project/static/media/lol.f1669eb6b103b25448f9.mp4",
+    "static/media/logoStart.png": "/lol-project/static/media/logoStart.9d45553ac27094498e16.png",
+    "static/media/decor.png": "/lol-project/static/media/decor.182c5ba101fcc43f4a48.png",
+    "static/media/ww.png": "/lol-project/static/media/ww.3f099538e51ae2cbcecf.png",
+    "static/media/Xayah_Render.png": "/lol-project/static/media/Xayah_Render.2836cb51510e06b17f7a.png",
+    "static/media/Ubuntu-Light.ttf": "/lol-project/static/media/Ubuntu-Light.0dd2d5986e2731a16ee7.ttf",
+    "static/media/yasou.png": "/lol-project/static/media/yasou.28c91c4ff620cc5b3289.png",
+    "static/media/Ubuntu-Regular.ttf": "/lol-project/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
+    "static/media/Ubuntu-Medium.ttf": "/lol-project/static/media/Ubuntu-Medium.e37c5546eb1a6efc4818.ttf",
+    "static/media/Ubuntu-Bold.ttf": "/lol-project/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
+    "static/media/orn.png": "/lol-project/static/media/orn.922959c53e281d1cc85a.png",
+    "static/media/test.png": "/lol-project/static/media/test.b04fcd64c3e79d532dea.png",
+    "static/media/reketon.png": "/lol-project/static/media/reketon.0da24f3834a5530385b7.png",
+    "static/media/yasou_play.png": "/lol-project/static/media/yasou_play.a2fa9cbba6dfab9e4369.png",
+    "static/media/frame2.png": "/lol-project/static/media/frame2.05b67a8309e477f7c0eb.png",
+    "static/media/tornado.gif": "/lol-project/static/media/tornado.99742c1dc285778202fd.gif",
+    "static/media/logo.png": "/lol-project/static/media/logo.265ffcc049839afd0603.png",
+    "static/media/fiora.png": "/lol-project/static/media/fiora.1126435cd34154e4bbab.png",
+    "static/media/bgPhoto.jpg": "/lol-project/static/media/bgPhoto.a227d91d1bdc182af290.jpg",
+    "static/media/hasageFight.png": "/lol-project/static/media/hasageFight.bffefb6ad07b425ba366.png",
+    "index.html": "/lol-project/index.html",
+    "main.ebacfe95.css.map": "/lol-project/static/css/main.ebacfe95.css.map",
+    "main.c9a883e5.js.map": "/lol-project/static/js/main.c9a883e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebacfe95.css",
+    "static/js/main.c9a883e5.js"
+  ]
+}
