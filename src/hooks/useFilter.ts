@@ -1,9 +1,9 @@
 import { IUseFilter } from './../models/IUseFilter';
 
-const useFilter = ({ stateParams, AllCharacters }: IUseFilter) => {
-  const filteredCharacters = AllCharacters.filter(
-    (character) => character.params.Agressive === stateParams.Agressive,
-  ).filter((character) => character.params.PersonClass === stateParams.PersonClass);
+const useFilter = ({ userParams, characterParams }: IUseFilter) => {
+  const filteredCharacters = characterParams.filter((character) =>
+    character.tags.some((el) => el.toLowerCase() === userParams.PersonClass.toLowerCase()),
+  );
 
   return filteredCharacters;
 };

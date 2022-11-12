@@ -1,6 +1,7 @@
-import { ICharacters, ICharactersParams } from './types';
+import { ICharacter } from './ICharacter';
+import { ICharactersParams } from './types';
 
 export interface IUseFilter {
-  stateParams: ICharactersParams;
-  AllCharacters: ICharacters[];
+  userParams: ICharactersParams;
+  characterParams: ICharacter[];
 }

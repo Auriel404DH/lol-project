@@ -3,5 +3,6 @@ export interface IAnswerVariant {
   el: string;
   i: number;
   param: string | boolean;
-  nextStep: () => void;
+  setStep: React.Dispatch<React.SetStateAction<number>>;
+  nextStep: number;
 }

@@ -1,25 +1,31 @@
 .character {
-  @apply w-3/6 py-5 m-2 bg-mainBG2 rounded mx-auto;
+  @apply w-4/6 p-5 m-2 bg-mainBG2 rounded mx-auto flex;
 
   &__name {
-    @apply text-center text-5xl font-ubuntuBold;
+    @apply text-center text-4xl font-ubuntuBold;
   }
 
   &__nickName {
-    @apply text-center text-xs mb-1 mt-2 font-ubuntuMedium;
+    @apply text-center text-sm mb-1 mt-2 font-ubuntuMedium;
   }
 
   &__discription {
     &_box {
       @apply bg-mainBG rounded mx-auto;
-      width: 450px;
     }
 
-    @apply text-center mx-auto mt-3 w-5/6 p-3;
+    @apply text-center mx-auto p-3;
   }
 }
 
-.image {
-  width: 450px;
-  @apply mx-auto;
+.half {
+  @apply w-11/12 mx-auto;
+}
+
+.half2 {
+  @apply w-11/12 mx-auto h-full flex flex-col justify-around;
+}
+
+.finalLink {
+  @apply border-mainBorder outline-1 text-center w-fit mx-auto p-2.5 rounded-lg cursor-pointer bg-mainBG hover:bg-mainBG2 duration-300 hover:outline;
 }

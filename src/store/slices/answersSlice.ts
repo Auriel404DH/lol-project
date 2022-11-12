@@ -9,7 +9,7 @@ const initialState: InitialState = {
   answers2: {},
 };
 
-export const AnswerSlice = createSlice({
+const AnswerSlice = createSlice({
   name: 'Answer',
   initialState,
   reducers: {
@@ -21,7 +21,6 @@ export const AnswerSlice = createSlice({
 
       state.answers2 = newAnswers2;
     },
-
     removeAnswers: (state) => {
       state.answers2 = {};
     },

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { IAnswerVariant } from '../../../models/IAnswerVariant';
-import { addAnswer2 } from '../../../store/slices/charactersSlice';
+import { addAnswer2 } from '../../../store/slices/answersSlice';
 import { PARAMS } from '../../../models/Enums';
 import s from './Answer.module.scss';
 
-const AnswerVariant = ({ el, i, nextStep, step, param }: IAnswerVariant) => {
+const AnswerVariant = ({ el, i, setStep, step, param, nextStep }: IAnswerVariant) => {
   const dispatch = useAppDispatch();
 
   const nextStepData = () => {
@@ -14,7 +14,8 @@ const AnswerVariant = ({ el, i, nextStep, step, param }: IAnswerVariant) => {
       answer: param,
     };
     dispatch(addAnswer2(answerParams));
-    nextStep();
+    setStep(nextStep);
+    // setStep();
   };
 
   return (

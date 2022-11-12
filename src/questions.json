@@ -1,21 +1,22 @@
 [
   {
     "id": 1,
-    "question": "Агрессивная игра - это про тебя?",
+    "question": "Какой класс вам ближе всего?",
     "answers": [
-      { "text": "Да, я сразу стараюсь взять преимущество в игре", "param": true },
-      { "text": "Нет, я препочитаю спокойную игру", "param": false }
+      { "text": "Воин", "param": "fighter", "nextStep": 1 },
+      { "text": "Убийца", "param": "assassin", "nextStep": 50 },
+      { "text": "Маг", "param": "mage", "nextStep": 100 },
+      { "text": "Стрелок", "param": "marksman", "nextStep": 101 },
+      { "text": "Танк", "param": "tank", "nextStep": 151 },
+      { "text": "Поддержка", "param": "support", "nextStep": 201 }
     ]
   },
   {
     "id": 2,
-    "question": "Какой класс вам ближе всего?",
+    "question": "Агрессивная игра - это про тебя?",
     "answers": [
-      { "text": "Воин", "param": "warrior" },
-      { "text": "Убийца", "param": "assassin" },
-      { "text": "Маг", "param": "mage" },
-      { "text": "Стрелок", "param": "karry" },
-      { "text": "Танк", "param": "tank" }
+      { "text": "Да, я сразу стараюсь взять преимущество в игре", "param": true, "nextStep": 1001 },
+      { "text": "Нет, я препочитаю спокойную игру", "param": false, "nextStep": 1001 }
     ]
   }
 ]

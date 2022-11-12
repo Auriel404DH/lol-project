@@ -1,13 +1,14 @@
-export type QuestionAnswers = (
+export type QuestionAnswers =
   | {
       text: string;
       param: boolean;
-    }
+      nextStep: number;
+    }[]
   | {
       text: string;
       param: string;
-    }
-)[];
+      nextStep: number;
+    }[];
 
 export type ICharactersParams = {
   Agressive: boolean;

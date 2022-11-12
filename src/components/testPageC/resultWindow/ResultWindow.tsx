@@ -1,23 +1,21 @@
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
-import AllCharacters from '../../../characters.json';
 import useFilter from '../../../hooks/useFilter';
 import PossibleCharacter from '../possibleCharacters/PossibleCharacter';
 import YourCharacter from '../yourCharacter/YourCharacter';
-import { removeAnswers } from '../../../store/slices/charactersSlice';
+import { removeAnswers } from '../../../store/slices/answersSlice';
 import s from './result.module.scss';
 
-interface IResultWindow {
-  setStep: React.Dispatch<React.SetStateAction<number>>;
-}
-
-const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
+const ResultWindow: React.FC<{ setStep: React.Dispatch<React.SetStateAction<number>> }> = ({
+  setStep,
+}) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const stateParams = useAppSelector(({ characters }) => characters?.answers2);
+  const userParams = useAppSelector((state) => state.answers?.answers2);
+  const characterParams = useAppSelector((state) => state.characters.champions);
 
-  const yourCharacters = useFilter({ stateParams, AllCharacters });
+  const yourCharacters = useFilter({ userParams, characterParams });
 
   const navigateToRead = () => {
     dispatch(removeAnswers());
@@ -40,9 +38,7 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
             Прочитать историю
           </button>
         </div>
-        {yourCharacters.map((character, i) => (
-          <YourCharacter character={character} key={i} />
-        ))}
+        <YourCharacter character={yourCharacters[0]} />
         <div className={s.button__zone}>
           <button onClick={navigateToTest} className={s.button}>
             Пройти тест заново
@@ -50,7 +46,7 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
         </div>
       </div>
       <div className={s.recs}>Возможно, вам так же подойдут:</div>
-      <div className="flex justify-center">
+      <div className="flex justify-center flex-wrap">
         {yourCharacters.map((character, i) => (
           <PossibleCharacter character={character} key={i} />
         ))}

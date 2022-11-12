@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import charactersSlice from './slices/charactersSlice';
+import characterSlice from './slices/characterSlice';
+import answersSlice from './slices/answersSlice';
 
 const store = configureStore({
   reducer: {
-    characters: charactersSlice,
+    answers: answersSlice,
+    characters: characterSlice,
   },
 });
 

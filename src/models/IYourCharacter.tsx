@@ -1,6 +1,5 @@
-import { ICharacters } from './types';
+import { ICharacter } from './ICharacter';
 
 export interface IYourCharacter {
-  character: ICharacters;
-  key: number;
+  character: ICharacter;
 }

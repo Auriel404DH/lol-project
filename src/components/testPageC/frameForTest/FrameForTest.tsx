@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { IframeForTest } from '../../../models/IframeForTest';
-import { removeAnswers } from '../../../store/slices/charactersSlice';
+import { removeAnswers } from '../../../store/slices/answersSlice';
 import AnswerVariant from '../answerVariant/AnswerVariant';
 import ConfirmModal from '../confirmModal/ConfirmModal';
 import ControlButtons from '../controlButtons/ControlButtons';
@@ -17,7 +17,6 @@ const FrameForTest = ({
   const dispatch = useAppDispatch();
   const [showModal, setShowModal] = React.useState<boolean>(false);
 
-  const nextStep = () => setStep(step + 1);
   const previousStep = () => setStep(step - 1);
   const clearSteps = () => {
     dispatch(removeAnswers());
@@ -38,9 +37,22 @@ const FrameForTest = ({
         <div className={s['frame__content-text']}>
           <ul className={s.frame__list}>
             {questionsAnswers[step].map((el, i) => (
-              <AnswerVariant step={step} el={el.text} param={el.param} i={i} nextStep={nextStep} />
+              <AnswerVariant
+                step={step}
+                el={el.text}
+                nextStep={el.nextStep}
+                param={el.param}
+                i={i}
+                setStep={setStep}
+              />
             ))}
           </ul>
+          <ControlButtons
+            step={step}
+            previousStep={previousStep}
+            showModal={showModal}
+            setShowModal={setShowModal}
+          />
           {showModal && (
             <ConfirmModal
               clearSteps={clearSteps}
@@ -50,12 +62,6 @@ const FrameForTest = ({
               attention={attention}
             />
           )}
-          <ControlButtons
-            step={step}
-            previousStep={previousStep}
-            showModal={showModal}
-            setShowModal={setShowModal}
-          />
         </div>
       </div>
     </div>
