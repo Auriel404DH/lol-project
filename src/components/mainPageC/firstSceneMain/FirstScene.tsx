@@ -12,12 +12,14 @@ const FirstScene = () => {
   const navigateToTest = () => navigate('/test');
   const navigateToRead = () => navigate('/story');
 
-  setTimeout(() => {
-    const startAlert = document.querySelector('#startAlert');
-    const readAlert = document.querySelector('#readAlert');
-    startAlert?.classList.add(s.opacity1);
-    readAlert?.classList.add(s.opacity1);
-  }, 10000);
+  React.useEffect(() => {
+    setTimeout(() => {
+      const startAlert = document.querySelector('#startAlert');
+      const readAlert = document.querySelector('#readAlert');
+      startAlert?.classList.add(s.opacity1);
+      readAlert?.classList.add(s.opacity1);
+    }, 10000);
+  }, []);
 
   return (
     <div className={s.wrapper}>

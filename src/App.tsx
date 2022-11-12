@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import MainLayout from './components/mainLayout/MainLayout';
 import { MainPage, TestPage, StoryPage } from './pages';
