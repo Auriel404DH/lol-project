@@ -9,6 +9,6 @@ export enum NAMES {
 }
 
 export enum PARAMS {
-  Agressive,
   PersonClass,
+  FighterType,
 }

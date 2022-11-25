@@ -15,7 +15,6 @@ const AnswerVariant = ({ el, i, setStep, step, param, nextStep }: IAnswerVariant
     };
     dispatch(addAnswer2(answerParams));
     setStep(nextStep);
-    // setStep();
   };
 
   return (

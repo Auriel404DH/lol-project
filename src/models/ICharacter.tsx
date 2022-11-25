@@ -10,6 +10,7 @@ export interface ICharacter {
   tags: string[];
   partype: string;
   stats: IStats;
+  classType?: string;
 }
 
 type IStats = {

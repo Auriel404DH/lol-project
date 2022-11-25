@@ -116,3 +116,23 @@
 
 
   https://www.leagueoflegends.com/ru-ru/champions/lux/
+
+
+  {
+    "id": 2,
+    "question": "Агрессивная игра - это про тебя?",
+    "answers": [
+      { "text": "Да, я сразу стараюсь взять преимущество в игре", "param": true, "nextStep": 1001 },
+      { "text": "Нет, я препочитаю спокойную игру", "param": false, "nextStep": 1001 }
+    ]
+  }
+
+
+  // {
+  //   "id": 2,
+  //   "question": "Каким воином хочешь быть?",
+  //   "answers": [
+  //     { "text": "Пассивный воин (джагернаут)", "param": "tank", "nextStep": 2 },
+  //     { "text": "Агрессивеый воин (иннициатор)", "param": "qwe", "nextStep": 26 }
+  //   ]
+  // }

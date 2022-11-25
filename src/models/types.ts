@@ -11,8 +11,8 @@ export type QuestionAnswers =
     }[];
 
 export type ICharactersParams = {
-  Agressive: boolean;
   PersonClass: string;
+  classType: string;
 };
 
 export interface ICharacters {

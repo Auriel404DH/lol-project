@@ -15,6 +15,9 @@ const ResultWindow: React.FC<{ setStep: React.Dispatch<React.SetStateAction<numb
   const userParams = useAppSelector((state) => state.answers?.answers2);
   const characterParams = useAppSelector((state) => state.characters.champions);
 
+  console.log(userParams);
+  console.log(characterParams);
+
   const yourCharacters = useFilter({ userParams, characterParams });
 
   const navigateToRead = () => {

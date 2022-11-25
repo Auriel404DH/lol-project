@@ -4,19 +4,19 @@
     "question": "Какой класс вам ближе всего?",
     "answers": [
       { "text": "Воин", "param": "fighter", "nextStep": 1 },
-      { "text": "Убийца", "param": "assassin", "nextStep": 50 },
-      { "text": "Маг", "param": "mage", "nextStep": 100 },
-      { "text": "Стрелок", "param": "marksman", "nextStep": 101 },
-      { "text": "Танк", "param": "tank", "nextStep": 151 },
-      { "text": "Поддержка", "param": "support", "nextStep": 201 }
+      { "text": "Истребитель", "param": "assassin", "nextStep": 1 },
+      { "text": "Маг", "param": "mage", "nextStep": 1 },
+      { "text": "Стрелок", "param": "marksman", "nextStep": 1 },
+      { "text": "Танк", "param": "tank", "nextStep": 1 },
+      { "text": "Поддержка", "param": "support", "nextStep": 1 }
     ]
   },
   {
     "id": 2,
-    "question": "Агрессивная игра - это про тебя?",
+    "question": "Каким воином хочешь быть?",
     "answers": [
-      { "text": "Да, я сразу стараюсь взять преимущество в игре", "param": true, "nextStep": 1001 },
-      { "text": "Нет, я препочитаю спокойную игру", "param": false, "nextStep": 1001 }
+      { "text": "Пассивный воин (джаггернаут)", "param": "juggernaut", "nextStep": 2 },
+      { "text": "Агрессивеый воин (инициатор)", "param": "initiator", "nextStep": 2 }
     ]
   }
 ]
