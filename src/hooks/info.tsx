@@ -1,0 +1,178 @@
+import React from 'react'
+
+const divers = [
+    'cammille',
+    'diana',
+    'elise',
+    'hecarim',
+    'irelia',
+    'jarvan_IV',
+    'lee_sin',
+    'olaf',
+    'pantheon',
+    'rek\'sai',
+    'renekton',
+    'rengar',
+    'skarner',
+    'vi',
+    'warwick',
+    'wukong',
+    'xin_zhao',
+]
+const juggernauts = [
+    'aatrox',
+    'darius',
+    'dr.mundo',
+    'garen',
+    'illaoi',
+    'mordekaiser',
+    'nasus',
+    'sett',
+    'shyvana',
+    'gnar',
+    'trundle',
+    'udyr',
+    'urgot',
+    'volibear',
+    'yorick'
+]
+const artillery = [
+    'jayce',
+    'lux',
+    'varus',
+    'vel\'koz',
+    'xerath',
+    'ziggs',
+    'heimerdinger'
+]
+const battlemages = [
+    'kayle',
+    'teemo',
+    'singed',
+    'azir',
+    'anivia',
+    'aurelion_sol',
+    'cassiopeia',
+    'karthus',
+    'malzahar',
+    'rumble',
+    'ryze',
+    'swain',
+    'taliyah',
+    'viktor',
+    'vladimir'
+]
+const burst = [
+    'kennen',
+    'fiddlesticks',
+    'ahri',
+    'annie',
+    'brand',
+    'karma',
+    'leblanc',
+    'lissandra',
+    'lux',
+    'neeko',
+    'orianna',
+    'seraphine',
+    'sylas',
+    'syndra',
+    'twisted_fate',
+    'veigar',
+    'vex',
+    'zoe'
+]
+const catchers = [
+    'blitzcrank',
+    'bard',
+    'ivern',
+    'morgana',
+    'neeko',
+    'pyke',
+    'rakan',
+    'thresh',
+    'zyra'
+]
+const enchanters = [
+    'zilean',
+    'janna',
+    'karma',
+    'lulu',
+    'nami',
+    'renata_glasc',
+    'senna',
+    'seraphine',
+    'sona',
+    'soraka',
+    'taric',
+    'yuumi'
+]
+const assassins = [
+    'nidalee',
+    'quinn',
+    'graves',
+    'gangplank',
+    'akali',
+    'akshan',
+    'diana',
+    'ekko',
+    'evelynn',
+    'fizz',
+    'kassadin',
+    'katarina',
+    'kha\'zix',
+    'kayn',
+    'nocturne',
+    'pyke',
+    'qiyana',
+    'rengar',
+    'shaco',
+    'talon',
+    'yone',
+    'zed'
+]
+const skirmishers = [
+    'bel\'veth',
+    'fiora',
+    'gwen',
+    'jax',
+    'k\'sante',
+    'kayn',
+    'kled',
+    'lillia',
+    'master_yi',
+    'nilah',
+    'riven',
+    'sylas',
+    'tryndamere',
+    'viego',
+    'yasuo',
+    'yone'
+]
+const vanguards = [
+    'cho\'gath',
+    'alistar',
+    'amumu',
+    'gragas',
+    'leona',
+    'malphite',
+    'maokai',
+    'nautilus',
+    'nunu',
+    'ornn',
+    'rammus',
+    'rell',
+    'sejuani',
+    'sion',
+    'zak'
+]
+const wardens = [
+    'braum',
+    'galio',
+    'k\'sante',
+    'poppy',
+    'shen',
+    'tahm_kench',
+    'taric',
+]
+
