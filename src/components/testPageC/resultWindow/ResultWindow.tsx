@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
 import useFilter from '../../../hooks/useFilter';
@@ -5,19 +6,20 @@ import PossibleCharacter from '../possibleCharacters/PossibleCharacter';
 import YourCharacter from '../yourCharacter/YourCharacter';
 import { removeAnswers } from '../../../store/slices/answersSlice';
 import s from './result.module.scss';
+import useUpdate from '../../../hooks/useUpdate';
 
-const ResultWindow: React.FC<{ setStep: React.Dispatch<React.SetStateAction<number>> }> = ({
-  setStep,
-}) => {
+interface IResultWindow {
+  setStep: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const userParams = useAppSelector((state) => state.answers?.answers2);
-  const characterParams = useAppSelector((state) => state.characters.champions);
+  const champions = useAppSelector((state) => state.characters.champions);
 
-  console.log(userParams);
-  console.log(characterParams);
-
+  const characterParams = useUpdate({ champions });
   const yourCharacters = useFilter({ userParams, characterParams });
 
   const navigateToRead = () => {

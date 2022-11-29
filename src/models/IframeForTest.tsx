@@ -6,4 +6,6 @@ export interface IframeForTest {
   questionsAnswers: QuestionAnswers[];
   setStep: React.Dispatch<React.SetStateAction<number>>;
   questionsCount: number;
+  // questionCounter: number;
+  // setQuestionCounter: React.Dispatch<React.SetStateAction<number>>;
 }

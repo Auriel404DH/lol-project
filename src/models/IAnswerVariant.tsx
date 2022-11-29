@@ -1,8 +1,9 @@
 export interface IAnswerVariant {
-  step: number;
   el: string;
-  i: number;
+  i?: number;
   param: string | boolean;
   setStep: React.Dispatch<React.SetStateAction<number>>;
   nextStep: number;
+  questionCounter: number;
+  setQuestionCounter: React.Dispatch<React.SetStateAction<number>>;
 }

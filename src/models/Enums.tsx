@@ -10,5 +10,5 @@ export enum NAMES {
 
 export enum PARAMS {
   PersonClass,
-  FighterType,
+  classType,
 }

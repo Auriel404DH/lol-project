@@ -16,11 +16,14 @@ const FrameForTest = ({
 }: IframeForTest) => {
   const dispatch = useAppDispatch();
   const [showModal, setShowModal] = React.useState<boolean>(false);
+  const [questionCounter, setQuestionCounter] = React.useState<number>(1);
 
   const previousStep = () => setStep(step - 1);
+
   const clearSteps = () => {
     dispatch(removeAnswers());
     setShowModal(!showModal);
+    setQuestionCounter(1);
     setStep(0);
   };
 
@@ -32,18 +35,19 @@ const FrameForTest = ({
       <div className={s.frame__content}>
         <h2 className={s.question}>{questionsTitle[step]}</h2>
         <div className={s.frame__counter}>
-          {step}/{questionsCount}
+          {questionCounter}/{questionsCount}
         </div>
         <div className={s['frame__content-text']}>
           <ul className={s.frame__list}>
             {questionsAnswers[step].map((el, i) => (
               <AnswerVariant
-                step={step}
                 el={el.text}
                 nextStep={el.nextStep}
                 param={el.param}
                 i={i}
                 setStep={setStep}
+                questionCounter={questionCounter}
+                setQuestionCounter={setQuestionCounter}
               />
             ))}
           </ul>
