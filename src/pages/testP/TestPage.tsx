@@ -3,12 +3,12 @@ import FrameForTest from '../../components/testPageC/frameForTest/FrameForTest';
 import ResultWindow from '../../components/testPageC/resultWindow/ResultWindow';
 import { fetchCharacters } from '../../store/actions/CharactersAction';
 import { QuestionAnswers } from '../../models/types';
-import { useAppDispatch } from '../../hooks/hooks';
-import questions from '../../questions.json';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 
 const TestPage = () => {
   const dispatch = useAppDispatch();
   const [step, setStep] = React.useState<number>(0);
+  const { questions } = useAppSelector((state) => state.answers);
 
   React.useEffect(() => {
     dispatch(fetchCharacters());
@@ -16,6 +16,7 @@ const TestPage = () => {
 
   const questionsTitle: string[] = questions.map((el) => el.question);
   const questionAnswers: QuestionAnswers[] = questions.map((el) => el.answers);
+  const questionStyles: string[] = questions.map((el) => el.style);
   const questionsCount: number = questionsTitle.length;
 
   return (
@@ -25,6 +26,7 @@ const TestPage = () => {
         <FrameForTest
           questionsCount={questionsCount}
           questionsTitle={questionsTitle}
+          questionStyles={questionStyles}
           questionsAnswers={questionAnswers}
           step={step}
           setStep={setStep}

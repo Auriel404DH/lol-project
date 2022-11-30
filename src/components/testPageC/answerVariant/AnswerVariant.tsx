@@ -2,14 +2,15 @@ import React from 'react';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { IAnswerVariant } from '../../../models/IAnswerVariant';
 import { addAnswer2 } from '../../../store/slices/answersSlice';
-import { PARAMS } from '../../../models/Enums';
 import s from './Answer.module.scss';
 
 const AnswerVariant = ({
   el,
+  step,
   setStep,
   param,
   nextStep,
+  styles,
   setQuestionCounter,
   questionCounter,
 }: IAnswerVariant) => {
@@ -17,7 +18,7 @@ const AnswerVariant = ({
 
   const nextStepData = () => {
     const answerParams = {
-      param: PARAMS[questionCounter - 1],
+      param: styles[step],
       answer: param,
     };
     dispatch(addAnswer2(answerParams));

@@ -12,6 +12,7 @@ const FrameForTest = ({
   setStep,
   questionsTitle,
   questionsAnswers,
+  questionStyles,
   questionsCount,
 }: IframeForTest) => {
   const dispatch = useAppDispatch();
@@ -26,9 +27,6 @@ const FrameForTest = ({
     setQuestionCounter(1);
     setStep(0);
   };
-
-  const confirmRestart: string = 'Вы точно хотите начать заново?';
-  const attention: string = 'Выбранные вами ответы не сохранятcя!';
 
   return (
     <div className={s.frame}>
@@ -45,7 +43,9 @@ const FrameForTest = ({
                 nextStep={el.nextStep}
                 param={el.param}
                 i={i}
+                step={step}
                 setStep={setStep}
+                styles={questionStyles}
                 questionCounter={questionCounter}
                 setQuestionCounter={setQuestionCounter}
               />
@@ -62,8 +62,6 @@ const FrameForTest = ({
               clearSteps={clearSteps}
               showModal={showModal}
               setShowModal={setShowModal}
-              text={confirmRestart}
-              attention={attention}
             />
           )}
         </div>

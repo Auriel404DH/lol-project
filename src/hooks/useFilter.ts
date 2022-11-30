@@ -2,9 +2,6 @@ import { ICharacter } from './../models/ICharacter';
 import { IUseFilter } from './../models/IUseFilter';
 
 const useFilter = ({ userParams, characterParams }: IUseFilter) => {
-  console.log(userParams);
-  console.log(characterParams);
-
   const filteredCharacters = characterParams
     .filter((character: ICharacter) =>
       character.tags.some((el) => el.toLowerCase() === userParams.PersonClass.toLowerCase()),
