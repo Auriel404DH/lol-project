@@ -162,6 +162,9 @@ const useUpdate = ({ champions }: { champions: ICharacter[] | [] }) => {
     'taric',
   ];
 
+  const agressiveChampions = [];
+  const passiveChampions = [];
+
   newChampions.forEach((character: ICharacter) => {
     if (character.tags.some((tag: string) => tag === 'Fighter')) {
       if (juggerWarriors.some((el) => el.toLowerCase() === character.id.toLowerCase())) {
