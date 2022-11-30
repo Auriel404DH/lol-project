@@ -11,6 +11,7 @@ export interface ICharacter {
   partype: string;
   stats: IStats;
   classType?: string;
+  aggressive: string[];
 }
 
 type IStats = {

@@ -1,4 +1,4 @@
 export interface IActionAnswer2 {
   param: string;
-  answer: string | boolean;
+  answer: string | string[];
 }

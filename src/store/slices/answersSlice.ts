@@ -3,7 +3,7 @@ import { IActionAnswer2 } from '../../models/IAnswerAction';
 
 type IStateAnswer = {
   text: string;
-  param: string | boolean;
+  param: string | string[];
   nextStep: number;
 };
 
@@ -208,8 +208,9 @@ const initialState: InitialState = {
       style: 'aggressive',
       question: 'Агришься?',
       answers: [
-        { text: 'УбьюНахуйБлять', param: true, nextStep: 21 },
-        { text: 'Я Терпила', param: false, nextStep: 21 },
+        { text: 'УбьюНахуйБлять', param: 'aggressive', nextStep: 21 },
+        { text: 'Нормальный чел', param: 'normal', nextStep: 21 },
+        { text: 'Я Терпила', param: 'passive', nextStep: 21 },
       ],
     },
     {
@@ -217,9 +218,9 @@ const initialState: InitialState = {
       style: 'difficulty',
       question: 'True Hard Player?',
       answers: [
-        { text: 'Я новенький', param: '123', nextStep: 22 },
-        { text: 'Я смешарик', param: '4567', nextStep: 22 },
-        { text: 'Я смерть', param: '8910', nextStep: 22 },
+        { text: 'Я новенький', param: ['1', '2', '3'], nextStep: 22 },
+        { text: 'Я смешарик', param: ['4', '5', '6', '7'], nextStep: 22 },
+        { text: 'Я смерть', param: ['8', '9', '10'], nextStep: 22 },
       ],
     },
   ],

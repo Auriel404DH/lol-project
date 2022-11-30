@@ -20,7 +20,10 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
   const champions = useAppSelector((state) => state.characters.champions);
 
   const characterParams = useUpdate({ champions });
+
   const yourCharacters = useFilter({ userParams, characterParams });
+
+  console.log(yourCharacters);
 
   const navigateToRead = () => {
     dispatch(removeAnswers());

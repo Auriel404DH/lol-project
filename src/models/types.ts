@@ -1,13 +1,13 @@
 export type QuestionAnswers = {
   text: string;
-  param: boolean | string;
+  param: string | string[];
   nextStep: number;
 }[];
 
 export type ICharactersParams = {
   PersonClass: string;
   classType: string;
-  aggressive: boolean;
+  aggressive: string;
   difficulty: string;
 };
 

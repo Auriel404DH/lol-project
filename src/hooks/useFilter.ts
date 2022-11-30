@@ -13,8 +13,10 @@ const useFilter = ({ userParams, characterParams }: IUseFilter) => {
       return character;
     })
     .filter((character: ICharacter) =>
+      // userParams.difficulty.includes(character.info.difficulty.toString()),
       userParams.difficulty.includes(character.info.difficulty.toString()),
-    );
+    )
+    .filter((character: ICharacter) => character.aggressive.includes(userParams.aggressive));
 
   return filteredCharacters;
 };

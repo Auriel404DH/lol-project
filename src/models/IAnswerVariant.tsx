@@ -2,7 +2,7 @@ export interface IAnswerVariant {
   el: string;
   i?: number;
   styles: string[];
-  param: string | boolean;
+  param: string | string[];
   step: number;
   setStep: React.Dispatch<React.SetStateAction<number>>;
   nextStep: number;
