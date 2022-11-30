@@ -7,6 +7,8 @@ export type QuestionAnswers = {
 export type ICharactersParams = {
   PersonClass: string;
   classType: string;
+  aggressive: boolean;
+  difficulty: string;
 };
 
 export interface ICharacters {

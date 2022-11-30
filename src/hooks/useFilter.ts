@@ -11,7 +11,10 @@ const useFilter = ({ userParams, characterParams }: IUseFilter) => {
         return character.classType?.toLowerCase() === userParams.classType?.toLowerCase();
       }
       return character;
-    });
+    })
+    .filter((character: ICharacter) =>
+      userParams.difficulty.includes(character.info.difficulty.toString()),
+    );
 
   return filteredCharacters;
 };

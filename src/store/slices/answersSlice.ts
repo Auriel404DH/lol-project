@@ -212,11 +212,22 @@ const initialState: InitialState = {
         { text: 'Я Терпила', param: false, nextStep: 21 },
       ],
     },
+    {
+      id: 21,
+      style: 'difficulty',
+      question: 'True Hard Player?',
+      answers: [
+        { text: 'Я новенький', param: '123', nextStep: 22 },
+        { text: 'Я смешарик', param: '4567', nextStep: 22 },
+        { text: 'Я смерть', param: '8910', nextStep: 22 },
+      ],
+    },
   ],
   answers2: {
     PersonClass: null,
     classType: null,
     aggressive: null,
+    difficulty: null,
   },
 };
 
