@@ -3,7 +3,7 @@ import { IActionAnswer2 } from '../../models/IAnswerAction';
 
 type IStateAnswer = {
   text: string;
-  param: string;
+  param: string | boolean;
   nextStep: number;
 };
 
@@ -203,10 +203,20 @@ const initialState: InitialState = {
         { text: 'бафф', param: 'BuffSupport', nextStep: 20 },
       ],
     },
+    {
+      id: 20,
+      style: 'aggressive',
+      question: 'Агришься?',
+      answers: [
+        { text: 'УбьюНахуйБлять', param: true, nextStep: 21 },
+        { text: 'Я Терпила', param: false, nextStep: 21 },
+      ],
+    },
   ],
   answers2: {
     PersonClass: null,
     classType: null,
+    aggressive: null,
   },
 };
 
