@@ -14,19 +14,18 @@ const useFilter = ({ userParams, characterParams }: IUseFilter) => {
   const difficultyFilter = classTypeFilter.filter((character: ICharacter) =>
     userParams.difficulty.includes(character.info.difficulty.toString()),
   );
-  const agressiveFilter = difficultyFilter.filter((character: ICharacter) => {
-    if (userParams.classType === null) {
-      return character.aggressive.includes(userParams.aggressive);
-    } else {
-      return character;
-    }
-  });
+  const agressiveFilter = difficultyFilter.filter((character: ICharacter) =>
+    character.aggressive.includes(userParams.aggressive),
+  );
 
-  const yourCharacters = agressiveFilter;
+  const yourCharacters = agressiveFilter.length !== 0 ? agressiveFilter : difficultyFilter;
 
   const mainCharacterIndex = Math.floor(Math.random() * yourCharacters.length);
+
   const userCharacter =
-    yourCharacters.length !== 1 ? yourCharacters.splice(mainCharacterIndex, 1)[0].id : yourCharacters[0].id;
+    yourCharacters.length !== 1
+      ? yourCharacters.splice(mainCharacterIndex, 1)[0].id
+      : yourCharacters[0].id;
 
   return { userCharacter, yourCharacters };
 };
