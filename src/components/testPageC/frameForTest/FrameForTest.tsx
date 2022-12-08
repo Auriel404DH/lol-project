@@ -30,41 +30,33 @@ const FrameForTest = ({
 
   return (
     <div className={s.frame}>
-      <div className={s.frame__content}>
-        <h2 className={s.question}>{questionsTitle[step]}</h2>
-        <div className={s.frame__counter}>
-          {questionCounter}/{questionsCount}
-        </div>
-        <div className={s['frame__content-text']}>
-          <ul className={s.frame__list}>
-            {questionsAnswers[step].map((el, i) => (
-              <AnswerVariant
-                el={el.text}
-                nextStep={el.nextStep}
-                param={el.param}
-                i={i}
-                step={step}
-                setStep={setStep}
-                styles={questionStyles}
-                questionCounter={questionCounter}
-                setQuestionCounter={setQuestionCounter}
-              />
-            ))}
-          </ul>
-          <ControlButtons
-            step={step}
-            previousStep={previousStep}
-            showModal={showModal}
-            setShowModal={setShowModal}
-          />
-          {showModal && (
-            <ConfirmModal
-              clearSteps={clearSteps}
-              showModal={showModal}
-              setShowModal={setShowModal}
+      <h2 className={s.question}>{questionsTitle[step]}</h2>
+      <div className={s.frame__counter}>{questionCounter}/9</div>
+      <div className={s['frame__content-text']}>
+        <ul className={s.frame__list}>
+          {questionsAnswers[step].map((el, i) => (
+            <AnswerVariant
+              el={el.text}
+              nextStep={el.nextStep}
+              param={el.param}
+              i={i}
+              step={step}
+              setStep={setStep}
+              styles={questionStyles}
+              questionCounter={questionCounter}
+              setQuestionCounter={setQuestionCounter}
             />
-          )}
-        </div>
+          ))}
+        </ul>
+        <ControlButtons
+          step={step}
+          previousStep={previousStep}
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
+        {showModal && (
+          <ConfirmModal clearSteps={clearSteps} showModal={showModal} setShowModal={setShowModal} />
+        )}
       </div>
     </div>
   );

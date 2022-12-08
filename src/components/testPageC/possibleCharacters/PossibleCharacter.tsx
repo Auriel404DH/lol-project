@@ -1,7 +1,11 @@
 import React from 'react';
-import { IYourCharacter } from '../../../models/IYourCharacter';
+import { ICharacter } from '../../../models/ICharacter';
 
-const PossibleCharacter: React.FC<IYourCharacter> = ({ character }) => {
+interface IPossibleCharacter {
+  character: ICharacter;
+}
+
+const PossibleCharacter: React.FC<IPossibleCharacter> = ({ character }) => {
   return (
     <div className="w-2/12 mx-2 my-2 cursor-pointer p-1 rounded-md bg-mainBG2 font-ubuntuMedium">
       <div className="text-center text-xl mb-1">{character.name}</div>

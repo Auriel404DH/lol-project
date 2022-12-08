@@ -1,5 +1,6 @@
 .frame {
-  @apply mx-auto mt-24 w-4/6 h-4/6 rounded-md border-2 border-mainBorder relative py-10 px-14 bg-slate-50;
+  @apply mx-auto mt-24 w-4/6 rounded-md border-2 border-mainBorder relative py-10 px-14 bg-mainBG;
+
   &__content-text {
     @apply relative text-start;
   }

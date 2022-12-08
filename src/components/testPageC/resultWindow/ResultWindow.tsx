@@ -21,9 +21,7 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
 
   const characterParams = useUpdate({ champions });
 
-  const yourCharacters = useFilter({ userParams, characterParams });
-
-  console.log(yourCharacters);
+  const { userCharacter, yourCharacters } = useFilter({ userParams, characterParams });
 
   const navigateToRead = () => {
     dispatch(removeAnswers());
@@ -46,19 +44,23 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
             Прочитать историю
           </button>
         </div>
-        <YourCharacter character={yourCharacters[0]} />
+        <YourCharacter character={userCharacter} />
         <div className={s.button__zone}>
           <button onClick={navigateToTest} className={s.button}>
             Пройти тест заново
           </button>
         </div>
       </div>
-      <div className={s.recs}>Возможно, вам так же подойдут:</div>
-      <div className="flex justify-center flex-wrap">
-        {yourCharacters.map((character, i) => (
-          <PossibleCharacter character={character} key={i} />
-        ))}
-      </div>
+      {yourCharacters.length !== 1 && (
+        <div>
+          <div className={s.recs}>Возможно, вам так же подойдут:</div>
+          <div className="flex justify-center flex-wrap">
+            {yourCharacters.map((character, i) => (
+              <PossibleCharacter character={character} key={i} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
