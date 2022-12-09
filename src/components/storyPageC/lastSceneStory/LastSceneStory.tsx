@@ -1,15 +1,9 @@
 import React from 'react';
-import cl from 'classnames';
-import s from './lastScene.module.scss';
+// import s from './lastScene.module.scss';
 
-const LastSceneStory = ({ isView, isNextView }: { isView: boolean; isNextView: boolean }) => {
+const LastSceneStory = () => {
   return (
-    <div
-      className={cl({
-        [s.item]: true,
-        [s.opacity1]: isView && !isNextView,
-      })}
-    >
+    <div className="relative z-50 flex h-screen w-full justify-center items-center">
       <div>qwe</div>
     </div>
   );

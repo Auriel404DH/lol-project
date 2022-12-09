@@ -1,0 +1,13 @@
+.dialogScene {
+  @apply flex items-end justify-around;
+}
+
+.firstBg {
+  background-image: url('../../../assets/bg/viego.png');
+  background-size: contain;
+}
+
+.blackBg {
+  background-image: url('../../../assets/bg/black.png');
+  background-size: contain;
+}

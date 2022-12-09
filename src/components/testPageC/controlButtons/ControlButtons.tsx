@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { IControlButtons } from '../../../models/IControlBouttons';
-import LeftArrow from '../../sharedC/icons/LeftArrowIcon';
-import RestartIcon from '../../sharedC/icons/RestartIcon';
+import LeftArrow from '../../../assets/icons/LeftArrowIcon';
+import RestartIcon from '../../../assets/icons/RestartIcon';
 
 const ControlButtons = ({ previousStep, showModal, setShowModal, step }: IControlButtons) => {
   const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import { IIcon } from '../../../models/IIcon';
+import { IIcon } from '../../models/IIcon';
 import s from './icon.module.scss';
 
 const LeftArrow = ({ width, height }: IIcon) => {

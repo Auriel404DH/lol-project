@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppDispatch } from '../../../hooks/hooks';
+import { useAppDispatch } from '../../../hooks';
 import { IAnswerVariant } from '../../../models/IAnswerVariant';
 import { addAnswer2 } from '../../../store/slices/answersSlice';
 import s from './Answer.module.scss';

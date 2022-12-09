@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 import useFilter from '../../../hooks/useFilter';
 import PossibleCharacter from '../possibleCharacters/PossibleCharacter';
 import YourCharacter from '../yourCharacter/YourCharacter';
 import { removeAnswers } from '../../../store/slices/answersSlice';
-import s from './result.module.scss';
 import useUpdate from '../../../hooks/useUpdate';
+import s from './result.module.scss';
 
 interface IResultWindow {
   setStep: React.Dispatch<React.SetStateAction<number>>;

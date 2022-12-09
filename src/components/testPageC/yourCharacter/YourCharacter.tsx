@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { IYourCharacter } from '../../../models/IYourCharacter';
 import { userCharacter } from '../../../store/actions/userCharacter';
 

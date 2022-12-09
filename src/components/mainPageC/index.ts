@@ -1,4 +1,3 @@
-import CheckPoints from './checkpoints/CheckPoints';
-import DialogPerson from './dialogPerson/DialogPerson';
+import DialogPerson from '../storyPageC/dialogPerson/DialogPerson';
 
-export { CheckPoints, DialogPerson };
+export { DialogPerson };

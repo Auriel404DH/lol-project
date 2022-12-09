@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppDispatch } from '../../../hooks/hooks';
+import { useAppDispatch } from '../../../hooks';
 import { IframeForTest } from '../../../models/IframeForTest';
 import { removeAnswers } from '../../../store/slices/answersSlice';
 import AnswerVariant from '../answerVariant/AnswerVariant';

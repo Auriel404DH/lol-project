@@ -15,7 +15,8 @@ const DialogeWindow = ({ who, text }: { who: string; text: string }) => {
         <h2 className={styles.name}>{who}</h2>
         <div className={styles.window__textArea}>
           <p className={styles.text}>
-            <WavyText value={text} />
+            {/* <WavyText value={text} /> */}
+            {text}
           </p>
         </div>
       </div>

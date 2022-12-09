@@ -1,14 +1,14 @@
 .item {
-  @apply flex flex-col w-full fixed bottom-3 z-30 opacity-0;
+  @apply flex flex-col w-10/12 relative z-30;
   transition-duration: 300ms;
 
   &_left {
-    @apply h-photo w-96 relative top-20 left-36;
+    @apply h-photo w-1/2 relative top-28 -left-16;
   }
 
   &_right {
-    @apply h-photo w-96 relative top-20;
-    left: 1000px;
+    @apply h-photo w-1/2 relative top-20;
+    left: 670px;
   }
 }
 

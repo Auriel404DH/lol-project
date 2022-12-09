@@ -1,7 +1,8 @@
 import React from 'react';
+import BgVideo from '../../components/mainPageC/bgVideo/BgVideo';
 import FirstScene from '../../components/mainPageC/firstSceneMain/FirstScene';
-import { useAppDispatch } from '../../hooks/hooks';
-
+import { useAppDispatch } from '../../hooks';
+import bg from '../../assets/bg/lol.mp4';
 import s from './MainPage.module.scss';
 
 const MainPage: React.FC = () => {
@@ -13,9 +14,12 @@ const MainPage: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div id="bg" className={s.main}>
-      <FirstScene />
-    </div>
+    <>
+      <div id="bg" className={s.main}>
+        <FirstScene />
+      </div>
+      <BgVideo bg={bg} />
+    </>
   );
 };
 

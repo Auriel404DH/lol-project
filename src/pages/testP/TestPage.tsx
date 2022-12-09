@@ -3,7 +3,9 @@ import FrameForTest from '../../components/testPageC/frameForTest/FrameForTest';
 import ResultWindow from '../../components/testPageC/resultWindow/ResultWindow';
 import { fetchCharacters } from '../../store/actions/CharactersAction';
 import { QuestionAnswers } from '../../models/types';
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import BgVideo from '../../components/mainPageC/bgVideo/BgVideo';
+import bg from '../../assets/bg/lol.mp4';
 
 const TestPage = () => {
   const dispatch = useAppDispatch();
@@ -20,22 +22,25 @@ const TestPage = () => {
   const questionsCount: number = questionsTitle.length;
 
   return (
-    <div className="flex-1 flex z-50 relative">
-      <div>qwe</div>
-      {step !== questionsCount ? (
-        <FrameForTest
-          questionsCount={questionsCount}
-          questionsTitle={questionsTitle}
-          questionStyles={questionStyles}
-          questionsAnswers={questionAnswers}
-          step={step}
-          setStep={setStep}
-        />
-      ) : (
-        <ResultWindow setStep={setStep} />
-      )}
-      <div>qwe</div>
-    </div>
+    <>
+      <div className="flex-1 flex z-50 relative">
+        <div>qwe</div>
+        {step !== questionsCount ? (
+          <FrameForTest
+            questionsCount={questionsCount}
+            questionsTitle={questionsTitle}
+            questionStyles={questionStyles}
+            questionsAnswers={questionAnswers}
+            step={step}
+            setStep={setStep}
+          />
+        ) : (
+          <ResultWindow setStep={setStep} />
+        )}
+        <div>qwe</div>
+      </div>
+      <BgVideo bg={bg} />
+    </>
   );
 };
 

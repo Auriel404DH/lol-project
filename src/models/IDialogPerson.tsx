@@ -3,7 +3,4 @@ export interface IDialogPerson {
   name: string;
   text: string;
   left: boolean;
-  isView: boolean;
-  isNextView?: boolean;
-  isLast?: boolean;
 }
