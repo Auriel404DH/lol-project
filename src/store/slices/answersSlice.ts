@@ -26,7 +26,7 @@ const initialState: InitialState = {
       question: 'Какой класс вам ближе всего?',
       style: 'PersonClass',
       answers: [
-        { text: 'Воин', param: 'fighter', nextStep: 1 },
+        { text: 'Воин ВоинвоинВионвиоацу ацуацуацу ацуацуацпукпкупк упукпкупку пкупкупку пкупкупкупк упуппуаупукпкупку пкупкупку пкупкупкупк упуппуаупукпкупку пкупкупку пкупкупкупк упуппуа', param: 'fighter', nextStep: 1 },
         { text: 'Маг', param: 'mage', nextStep: 5 },
       ],
     },

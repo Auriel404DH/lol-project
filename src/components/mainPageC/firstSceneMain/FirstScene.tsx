@@ -34,10 +34,10 @@ const FirstScene = () => {
 
       <div className={s.alertButtons}>
         <div id="startAlert" onClick={navigateToTest} className={s.buttonTest}>
-          click here to start test!
+          Click here to start test!
         </div>
         <div id="readAlert" onClick={navigateToRead} className={s.buttonTest}>
-          Cleck here to read a story!
+          Click here to read a story!
         </div>
       </div>
     </div>

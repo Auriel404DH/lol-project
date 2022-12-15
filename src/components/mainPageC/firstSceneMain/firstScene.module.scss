@@ -5,6 +5,11 @@
 
 .buttonTest {
   @apply border-2 rounded p-5 bg-mainBG2 border-mainBorder opacity-0 cursor-pointer hover:bg-mainBG duration-300;
+  -ms-user-select: none;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+    user-select: none;
 }
 
 .alertButtons {
@@ -22,6 +27,12 @@
   animation: tornado 4s;
   animation-delay: 5.9s;
   animation-fill-mode: forwards;
+  pointer-events: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+    user-select: none;
 }
 
 .hasage {
@@ -29,6 +40,12 @@
   animation: hasage 2s ease-in-out;
   animation-delay: 4s;
   animation-fill-mode: forwards;
+  pointer-events: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+    user-select: none;
 }
 
 .hasagePlay {
@@ -38,10 +55,22 @@
   animation-fill-mode: forwards;
   left: -240px;
   width: 600px;
+  pointer-events: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+    user-select: none;
 }
 
 .logoStart {
   @apply z-30;
+  pointer-events: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+    user-select: none;
   transition-duration: 1000ms;
   animation: startLogo 1s ease-in-out infinite;
   left: 9%;
@@ -49,6 +78,12 @@
 
 .logoTest {
   @apply absolute top-12;
+  pointer-events: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+    user-select: none;
   animation: showTest 1.5s ease-in-out;
   animation-delay: 2s;
   animation-fill-mode: forwards;
