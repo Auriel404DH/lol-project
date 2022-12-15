@@ -4,10 +4,24 @@
 
 .firstBg {
   background-image: url('../../../assets/bg/viego.png');
+  @apply min-h-screen;
   background-size: contain;
 }
 
 .blackBg {
   background-image: url('../../../assets/bg/black.png');
+  @apply min-h-screen;
   background-size: contain;
+}
+
+.winterHome {
+  background-image: url('../../../assets/bg/winterHome.jpg');
+  @apply min-h-screen;
+  background-size: cover;
+}
+
+.homeInside {
+  background-image: url('../../../assets/bg/homeInside.jpg');
+  @apply min-h-screen;
+  background-size: cover;
 }

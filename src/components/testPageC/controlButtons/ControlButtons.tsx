@@ -3,11 +3,11 @@ import { IControlButtons } from '../../../models/IControlBouttons';
 import LeftArrow from '../../../assets/icons/LeftArrowIcon';
 import RestartIcon from '../../../assets/icons/RestartIcon';
 
-const ControlButtons = ({ previousStep, showModal, setShowModal, step }: IControlButtons) => {
+const ControlButtons = ({ previousStep, showModal, setShowModal, questionCounter }: IControlButtons) => {
   const navigate = useNavigate();
 
   const toggleModal = () => setShowModal(!showModal);
-  const backStep = step !== 0 ? previousStep : undefined;
+  const backStep = questionCounter !== 0 ? previousStep : undefined;
   const menuClick = () => navigate('/');
 
   return (

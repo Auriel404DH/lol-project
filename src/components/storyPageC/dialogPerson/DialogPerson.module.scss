@@ -3,12 +3,17 @@
   transition-duration: 300ms;
 
   &_left {
-    @apply h-photo w-1/2 relative top-28 -left-16;
+    @apply h-photo w-2/5 relative top-28 -left-0;
   }
 
   &_right {
-    @apply h-photo w-1/2 relative top-20;
-    left: 670px;
+    @apply h-photo w-1/4 relative top-32;
+    left: 800px;
+  }
+
+  &_center {
+    @apply h-photo w-1/3 relative top-32;
+    left: 400px;
   }
 }
 

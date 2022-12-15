@@ -2,32 +2,42 @@ import { ICharacter } from './../models/ICharacter';
 import { IUseFilter } from './../models/IUseFilter';
 
 const useFilter = ({ userParams, characterParams }: IUseFilter) => {
-  const classFilter = characterParams.filter((character: ICharacter) =>
-    character.tags.some((el) => el.toLowerCase() === userParams.PersonClass.toLowerCase()),
-  );
-  const classTypeFilter = classFilter.filter((character: ICharacter) => {
-    if (userParams.classType) {
-      return character.classType?.toLowerCase() === userParams.classType?.toLowerCase();
-    }
-    return character;
+  const firstFilterCharacters = characterParams
+    .filter((character: ICharacter) =>
+      character.tags.some((el) => el.toLowerCase() === userParams.PersonClass.toLowerCase()),
+    )
+    .filter((character: ICharacter) => {
+      if (userParams.classType) {
+        return character.classType?.toLowerCase() === userParams.classType?.toLowerCase();
+      }
+      return character;
+    })
+    .filter((character: ICharacter) => {
+      return character.aggressive.includes(userParams.aggressive.toLowerCase());
+    });
+
+  const secondFilterCharacters = firstFilterCharacters.filter((character: ICharacter) => {
+    return userParams.difficulty.includes(character.info.difficulty.toString());
   });
-  const difficultyFilter = classTypeFilter.filter((character: ICharacter) =>
-    userParams.difficulty.includes(character.info.difficulty.toString()),
-  );
-  const agressiveFilter = difficultyFilter.filter((character: ICharacter) =>
-    character.aggressive.includes(userParams.aggressive),
-  );
 
-  const yourCharacters = agressiveFilter.length !== 0 ? agressiveFilter : difficultyFilter;
+  const mainCharacterIndex = Math.floor(Math.random() * secondFilterCharacters.length);
+  const saveCharacterIndex = Math.floor(Math.random() * firstFilterCharacters.length);
 
-  const mainCharacterIndex = Math.floor(Math.random() * yourCharacters.length);
+  const createExit = (index: number, otherChampions: ICharacter[]) => {
+    const userCharacter =
+      otherChampions.length !== 1
+        ? otherChampions.splice(index, 1)[0].id
+        : otherChampions.slice(0)[0].id;
 
-  const userCharacter =
-    yourCharacters.length !== 1
-      ? yourCharacters.splice(mainCharacterIndex, 1)[0].id
-      : yourCharacters[0].id;
+    return { userCharacter, otherChampions };
+  };
 
-  return { userCharacter, yourCharacters };
+  const { userCharacter, otherChampions } =
+    secondFilterCharacters.length === 0
+      ? createExit(saveCharacterIndex, firstFilterCharacters)
+      : createExit(mainCharacterIndex, secondFilterCharacters);
+
+  return { userCharacter, otherChampions };
 };
 
 export default useFilter;

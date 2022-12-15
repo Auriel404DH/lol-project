@@ -18,13 +18,15 @@ const DialogScene = () => {
         [s.dialogScene]: true,
         [s.firstBg]: sentences[replic] && sentences[replic].bg === 'ViegoFall',
         [s.blackBg]: sentences[replic] && sentences[replic].bg === 'Black',
+        [s.winterHome]: sentences[replic] && sentences[replic].bg === 'winterHome',
+        [s.homeInside]: sentences[replic] && sentences[replic].bg === 'homeInside',
       })}
     >
       {replic !== sentences.length ? (
         <>
           <LeftButtons setReplic={setReplic} />
           <DialogPerson
-            left={sentences[replic].isLeft}
+            position={sentences[replic].position}
             person={sentences[replic].image}
             name={sentences[replic].name}
             text={sentences[replic].text}

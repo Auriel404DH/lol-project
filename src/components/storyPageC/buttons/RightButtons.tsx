@@ -18,13 +18,13 @@ const RightButtons = ({
     <div>
       <div
         onClick={() => setReplic(replic + 1)}
-        className="z-50 relative cursor-pointer bottom-16 rounded-xl border-2 border-mainBG2 bg-main p-5 text-main"
+        className="z-50 relative cursor-pointer bottom-20 rounded-xl border-2 border-mainBG2 bg-main p-5 text-main"
       >
         <img src={arrow} alt="arr" />
       </div>
       <div
         onClick={() => replic !== 0 && setReplic(replic - 1)}
-        className="z-50 relative cursor-pointer bottom-10 rounded-xl border-2 border-mainBG2 bg-main rotate-180 p-5 text-main"
+        className="z-50 relative cursor-pointer bottom-16 rounded-xl border-2 border-mainBG2 bg-main rotate-180 p-5 text-main"
       >
         <img src={arrow} alt="arr" />
       </div>

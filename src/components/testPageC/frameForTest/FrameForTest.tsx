@@ -10,28 +10,35 @@ import s from './FrameForTest.module.scss';
 const FrameForTest = ({
   step,
   setStep,
+  prevStep,
+  setPrevStep,
   questionsTitle,
   questionsAnswers,
   questionStyles,
-  questionsCount,
 }: IframeForTest) => {
   const dispatch = useAppDispatch();
   const [showModal, setShowModal] = React.useState<boolean>(false);
-  const [questionCounter, setQuestionCounter] = React.useState<number>(1);
+  const [questionCounter, setQuestionCounter] = React.useState<number>(0);
 
-  const previousStep = () => setStep(step - 1);
+  const previousStep = React.useCallback(() => {
+    setQuestionCounter(questionCounter - 1);
+    setStep(prevStep[questionCounter - 1]);
+    prevStep.pop();
+    setPrevStep(prevStep);
+  }, [prevStep, setStep, setPrevStep, questionCounter]);
 
-  const clearSteps = () => {
+  const clearSteps = React.useCallback(() => {
     dispatch(removeAnswers());
     setShowModal(!showModal);
-    setQuestionCounter(1);
+    setQuestionCounter(0);
+    setPrevStep([]);
     setStep(0);
-  };
+  }, [dispatch, setShowModal, setPrevStep, setStep, showModal]);
 
   return (
     <div className={s.frame}>
       <h2 className={s.question}>{questionsTitle[step]}</h2>
-      <div className={s.frame__counter}>{questionCounter}/9</div>
+      <div className={s.frame__counter}>{questionCounter + 1}/9</div>
       <div className={s['frame__content-text']}>
         <ul className={s.frame__list}>
           {questionsAnswers[step].map((el, i) => (
@@ -41,7 +48,9 @@ const FrameForTest = ({
               param={el.param}
               i={i}
               step={step}
+              prevStep={prevStep}
               setStep={setStep}
+              setPrevStep={setPrevStep}
               styles={questionStyles}
               questionCounter={questionCounter}
               setQuestionCounter={setQuestionCounter}
@@ -49,7 +58,7 @@ const FrameForTest = ({
           ))}
         </ul>
         <ControlButtons
-          step={step}
+          questionCounter={questionCounter}
           previousStep={previousStep}
           showModal={showModal}
           setShowModal={setShowModal}

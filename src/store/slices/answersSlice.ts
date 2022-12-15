@@ -218,7 +218,7 @@ const initialState: InitialState = {
       style: 'difficulty',
       question: 'True Hard Player?',
       answers: [
-        { text: 'Я новенький', param: ['1', '2', '3'], nextStep: 22 },
+        { text: 'Я новенький', param: ['0', '1', '2', '3'], nextStep: 22 },
         { text: 'Я смешарик', param: ['4', '5', '6', '7'], nextStep: 22 },
         { text: 'Я смерть', param: ['8', '9', '10'], nextStep: 22 },
       ],

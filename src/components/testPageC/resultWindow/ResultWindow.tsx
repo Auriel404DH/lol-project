@@ -9,10 +9,11 @@ import useUpdate from '../../../hooks/useUpdate';
 import s from './result.module.scss';
 
 interface IResultWindow {
+  setPrevStep: React.Dispatch<React.SetStateAction<number[]>>;
   setStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
+const ResultWindow: React.FC<IResultWindow> = ({ setStep, setPrevStep }) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -21,7 +22,7 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
 
   const characterParams = useUpdate({ champions });
 
-  const { userCharacter, yourCharacters } = useFilter({ userParams, characterParams });
+  const { userCharacter, otherChampions } = useFilter({ userParams, characterParams });
 
   const navigateToRead = () => {
     dispatch(removeAnswers());
@@ -29,6 +30,7 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
   };
   const navigateToTest = () => {
     dispatch(removeAnswers());
+    setPrevStep([]);
     setStep(0);
   };
 
@@ -51,11 +53,11 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep }) => {
           </button>
         </div>
       </div>
-      {yourCharacters.length !== 1 && (
+      {otherChampions.length !== 1 && (
         <div>
           <div className={s.recs}>Возможно, вам так же подойдут:</div>
           <div className="flex justify-center flex-wrap">
-            {yourCharacters.map((character, i) => (
+            {otherChampions.map((character, i) => (
               <PossibleCharacter character={character} key={i} />
             ))}
           </div>

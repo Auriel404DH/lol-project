@@ -10,6 +10,7 @@ import bg from '../../assets/bg/lol.mp4';
 const TestPage = () => {
   const dispatch = useAppDispatch();
   const [step, setStep] = React.useState<number>(0);
+  const [prevStep, setPrevStep] = React.useState<number[]>([]);
   const { questions } = useAppSelector((state) => state.answers);
 
   React.useEffect(() => {
@@ -33,9 +34,11 @@ const TestPage = () => {
             questionsAnswers={questionAnswers}
             step={step}
             setStep={setStep}
+            prevStep={prevStep}
+            setPrevStep={setPrevStep}
           />
         ) : (
-          <ResultWindow setStep={setStep} />
+          <ResultWindow setPrevStep={setPrevStep} setStep={setStep} />
         )}
         <div>qwe</div>
       </div>

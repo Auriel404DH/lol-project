@@ -7,7 +7,9 @@ import s from './Answer.module.scss';
 const AnswerVariant = ({
   el,
   step,
+  prevStep,
   setStep,
+  setPrevStep,
   param,
   nextStep,
   styles,
@@ -23,6 +25,8 @@ const AnswerVariant = ({
     };
     dispatch(addAnswer2(answerParams));
     setStep(nextStep);
+    prevStep.push(step);
+    setPrevStep(prevStep);
     setQuestionCounter(questionCounter + 1);
   };
 
