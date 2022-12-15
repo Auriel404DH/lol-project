@@ -6,6 +6,8 @@ import hasageFight from '../../../assets/startWindow/hasageFight.png';
 import { HasagePlay } from '../../../assets/characters';
 import s from './firstScene.module.scss';
 import { useNavigate } from 'react-router-dom';
+import poro from "../../../assets/characters/poro.png"
+import poro2 from "../../../assets/characters/poro2.png"
 
 const FirstScene = () => {
   const navigate = useNavigate();
@@ -33,11 +35,15 @@ const FirstScene = () => {
       </div>
 
       <div className={s.alertButtons}>
-        <div id="startAlert" onClick={navigateToTest} className={s.buttonTest}>
+        <div id="startAlert" onClick={navigateToTest} className={`${s.buttonTest} ${s.btnTest}`}>
           Click here to start test!
         </div>
-        <div id="readAlert" onClick={navigateToRead} className={s.buttonTest}>
+        <div id="readAlert" onClick={navigateToRead} className={`${s.buttonTest} ${s.btnStory}`}>
           Click here to read a story!
+        </div>
+        <div className={s.poroImg}>
+          <img src={poro} className={s.poroMove} alt="" />
+          <img src={poro2} className={s.poroStatic} alt="" />
         </div>
       </div>
     </div>
