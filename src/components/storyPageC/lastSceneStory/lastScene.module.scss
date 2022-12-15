@@ -1,8 +1,39 @@
-.item {
-  @apply fixed border z-50 bottom-96 w-full flex justify-center opacity-0 duration-500;
+.wrapper {
+  @apply relative z-50 flex flex-col h-screen w-screen justify-end;
+  background-image: url('../../../assets/bg/storyMainMenu2.jpg');
+  background-size: cover;
 }
 
-.opacity1 {
-  @apply opacity-100;
-  transition-duration: 300ms;
+.image {
+  @apply fixed -bottom-5 overflow-hidden;
+
+  > img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+.theEnd {
+  @apply absolute top-40 rounded-xl border-mainBorder text-4xl p-5 border-2 bg-mainBG2 left-24;
+}
+
+.buttons {
+  @apply absolute right-0 top-16;
+}
+
+.buttonsBlock {
+  @apply my-auto mr-24 rounded-xl w-fit bg-mainBG2 border-mainBorder border-2 py-8;
+}
+
+.startButton {
+  @apply relative mx-auto cursor-pointer flex items-center text-4xl rounded-2xl mb-9  justify-center  z-50;
+  width: 300px;
+}
+
+.exitButton {
+  @apply relative cursor-pointer flex items-center text-xl rounded-2xl border-2 border-mainBorder justify-center py-1 mx-auto bg-mainBG z-50;
+  width: 100px;
 }

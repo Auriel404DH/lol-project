@@ -15,10 +15,10 @@
 }
 
 .button {
-  @apply border rounded bg-mainBG2 border-mainBorder p-2 mx-2 hover:bg-mainBG duration-500 cursor-pointer;
+  @apply border rounded bg-mainBG2 border-mainBorder p-2 my-2 hover:bg-mainBG duration-500 cursor-pointer;
 
   &__zone {
-    @apply w-3/12 justify-center flex items-center;
+    @apply w-3/12 flex flex-col items-center;
   }
 }
 

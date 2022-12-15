@@ -26,7 +26,7 @@ const TestPage = () => {
   return (
     <>
       <div className={s.wrapper}>
-        <div>qwe</div>
+        <div className={s.border}>.</div>
         {step !== questionsCount ? (
           <FrameForTest
             questionsCount={questionsCount}
@@ -41,7 +41,7 @@ const TestPage = () => {
         ) : (
           <ResultWindow setPrevStep={setPrevStep} setStep={setStep} />
         )}
-        <div>qwe</div>
+        <div className={s.borderR}>.</div>
       </div>
       <BgVideo bg={bg} />
       <div className={s.blackout}></div>

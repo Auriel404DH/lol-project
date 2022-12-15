@@ -4,14 +4,18 @@ import restart from '../../../assets/decorations/restart.png';
 import exit from './../../../assets/decorations/exit.png';
 
 const LeftButtons = ({
+  replic,
   setReplic,
 }: {
+  replic: number;
   setReplic: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   const navigate = useNavigate();
 
-  const navigateToMainPage = () => navigate('/');
-
+  const navigateToMainPage = () => {
+    localStorage.setItem('replic', replic.toString());
+    navigate('/');
+  };
   return (
     <div>
       <div

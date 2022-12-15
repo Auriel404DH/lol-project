@@ -10,7 +10,7 @@ const RightButtons = ({
 }) => {
   document.onkeydown = (key) => {
     if (key.code === 'Space' || key.key === 'Enter') {
-      setReplic(replic + 1);
+      setReplic((prev) => prev + 1);
     }
   };
 

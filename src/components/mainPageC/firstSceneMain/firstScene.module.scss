@@ -2,53 +2,54 @@
   @apply fixed top-0 left-0 h-screen w-screen z-50 font-ubuntuMedium;
   transition-duration: 1000ms;
 }
-.alertButtons{
+.alertButtons {
   background-color: rgba(0, 0, 0, 0.493);
   padding: 10px 0;
   align-items: center;
 }
-.poroImg{
+.poroImg {
   order: 2;
-  img{
+  img {
     height: 50px;
     width: 50px;
     transform-origin: center;
   }
-  .poroMove{
+  .poroMove {
     display: none;
   }
 }
-.btnTest{
+.btnTest {
   order: 1;
-  &:hover ~ .poroImg .poroMove{
+  &:hover ~ .poroImg .poroMove {
     display: block;
     transform: rotateY(180deg);
     animation: poroTest 1s forwards;
   }
-  &:hover ~ .poroImg .poroStatic{
-      display: none;
+  &:hover ~ .poroImg .poroStatic {
+    display: none;
   }
 }
-.btnStory{
+.btnStory {
   order: 3;
-  &:hover ~ .poroImg .poroMove{
+  &:hover ~ .poroImg .poroMove {
     display: block;
     animation: poroStory 1s forwards;
   }
-  &:hover ~ .poroImg .poroStatic{
-      display: none;
+  &:hover ~ .poroImg .poroStatic {
+    display: none;
   }
 }
 .buttonTest {
   @apply border-2 rounded p-5 bg-mainBG2 border-mainBorder opacity-0 cursor-pointer hover:bg-mainBG duration-300;
-  &:hover{
-    box-shadow: inset 0px 0px 20px 3px #957d00,0px 0px 20px 3px #957d00;
-  }
   -ms-user-select: none;
   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-    user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  &:hover {
+    box-shadow: inset 0px 0px 20px 3px #957d00, 0px 0px 20px 3px #957d00;
+  }
 }
 
 .alertButtons {
@@ -63,33 +64,37 @@
 .tornado {
   @apply absolute opacity-0;
   height: 600px;
+  top: 40px;
   animation: tornado 4s;
   animation-delay: 5.9s;
   animation-fill-mode: forwards;
   pointer-events: none;
   -ms-user-select: none;
   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-    user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .hasage {
-  @apply z-50 absolute -left-24 top-32 opacity-0;
+  @apply z-50 absolute -left-24 opacity-0;
+  top: 140px;
   animation: hasage 2s ease-in-out;
   animation-delay: 4s;
   animation-fill-mode: forwards;
+  height: 600px;
   pointer-events: none;
   -ms-user-select: none;
   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-    user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .hasagePlay {
-  @apply z-50 absolute top-24 opacity-0;
+  @apply z-50 absolute opacity-0;
   animation: hasagePlay 0.6s ease-in-out;
+  top: 140px;
   animation-delay: 5.6s;
   animation-fill-mode: forwards;
   left: -240px;
@@ -97,9 +102,9 @@
   pointer-events: none;
   -ms-user-select: none;
   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-    user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .logoStart {
@@ -107,9 +112,9 @@
   pointer-events: none;
   -ms-user-select: none;
   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-    user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   transition-duration: 1000ms;
   animation: startLogo 1s ease-in-out infinite;
   left: 9%;
@@ -120,9 +125,9 @@
   pointer-events: none;
   -ms-user-select: none;
   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-    user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   animation: showTest 1.5s ease-in-out;
   animation-delay: 2s;
   animation-fill-mode: forwards;
@@ -170,7 +175,7 @@
   }
   99% {
     transform: rotateY(180deg);
-    left: -5rem;
+    left: -30%;
     opacity: 1;
   }
   100% {
@@ -200,42 +205,42 @@
   }
 }
 @keyframes poroTest {
-  0%{
+  0% {
     transform: rotateZ(0) rotateY(180deg) translate(0);
   }
-  20%{
-    transform: rotateZ(3deg) rotateY(180deg) translate(40px);
+  20% {
+    transform: rotateZ(3deg) rotateY(180deg) translate(64px);
   }
-  40%{
-    transform: rotateZ(0deg) rotateY(180deg) translate(80px);
+  40% {
+    transform: rotateZ(0deg) rotateY(180deg) translate(128px);
   }
-  60%{
-    transform: rotateZ(3deg) rotateY(180deg) translate(120px);
+  60% {
+    transform: rotateZ(3deg) rotateY(180deg) translate(192px);
   }
-  80%{
-    transform: rotateZ(0deg) rotateY(180deg) translate(160px);
+  80% {
+    transform: rotateZ(0deg) rotateY(180deg) translate(256px);
   }
-  100%{
-    transform: rotateZ(0) rotateY(180deg) translate(200px);
+  100% {
+    transform: rotateZ(0) rotateY(180deg) translate(320px);
   }
 }
 @keyframes poroStory {
-  0%{
+  0% {
     transform: rotateZ(0) translate(0);
   }
-  20%{
-    transform: rotateZ(3deg) translate(40px);
+  20% {
+    transform: rotateZ(3deg) translate(64px);
   }
-  40%{
-    transform: rotateZ(0deg) translate(80px);
+  40% {
+    transform: rotateZ(0deg) translate(128px);
   }
-  60%{
-    transform: rotateZ(3deg) translate(120px);
+  60% {
+    transform: rotateZ(3deg) translate(192px);
   }
-  80%{
-    transform: rotateZ(0deg) translate(160px);
+  80% {
+    transform: rotateZ(0deg) translate(256px);
   }
-  100%{
-    transform: rotateZ(0) translate(200px);
+  100% {
+    transform: rotateZ(0) translate(320px);
   }
 }

@@ -1,22 +1,45 @@
 .wrapper {
-  background-image: url('../../../assets/bg/storyMainMenu.jpg');
+  background-image: url('../../../assets/bg/storyMainMenu2.jpg');
+  background-size: cover;
   @apply min-h-screen;
 }
 
+.image {
+  width: 1500px;
+}
+
+.content {
+  @apply relative z-50 flex justify-around items-end h-screen;
+}
+
+.menu {
+  @apply mr-12 bg-mainBG2 h-screen border-mainBorder border-x-2 p-4 flex flex-col justify-between;
+}
+
+.story {
+  @apply relative mx-auto text-center text-2xl border-b-2 py-3 border-mainBorder bg-mainBG;
+  width: 300px;
+}
+
 .startButton {
-  @apply relative mx-auto cursor-pointer flex items-center text-4xl rounded-2xl border-2 py-3 border-mainBorder justify-center bg-mainBG2 z-50;
-  top: 200px;
+  @apply relative mx-auto cursor-pointer text-4xl rounded-md border-2 py-3 border-mainBorder text-center bg-mainBG;
   width: 300px;
 }
 
 .continueButton {
-  @apply relative cursor-pointer flex items-center text-4xl rounded-2xl border-2 border-mainBorder justify-center py-3 mx-auto bg-mainBG2 z-50;
-  top: 250px;
-  width: 250px;
+  @apply relative cursor-pointer text-3xl rounded-md border-2 border-mainBorder text-center py-3 mx-auto mt-6 bg-mainBG;
+  width: 270px;
 }
 
 .exitButton {
-  @apply relative cursor-pointer flex items-center text-4xl rounded-2xl border-2 border-mainBorder justify-center py-2.5 mx-auto bg-mainBG2 z-50;
-  top: 300px;
+  @apply relative cursor-pointer text-4xl rounded-md border-2 border-mainBorder text-center py-2.5 mx-auto bg-mainBG;
   width: 200px;
+}
+
+.snow {
+  @apply absolute top-0;
+
+  img {
+    @apply relative h-screen w-screen z-40;
+  }
 }

@@ -12,6 +12,7 @@ const DialogPerson = ({ person, name, text, position }: IDialogPerson) => {
           [s.item_left]: position === 'left',
           [s.item_center]: position === 'center',
           [s.item_right]: position === 'right',
+          [s.item_full]: position === 'full',
         })}
         src={person}
         alt=""

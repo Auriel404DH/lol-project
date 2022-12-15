@@ -6,7 +6,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={s.main}>
       <Header />
-      <div className="flex-1">{children}</div>
+      <div className="flex-1 relative z-40">{children}</div>
     </div>
   );
 };

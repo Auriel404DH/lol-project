@@ -1,5 +1,5 @@
 .character {
-  @apply w-4/6 p-5 m-2 bg-mainBG2 rounded mx-auto flex;
+  @apply w-full p-2 bg-mainBG2 rounded flex justify-center;
 
   &__name {
     @apply text-center text-4xl font-ubuntuBold;
@@ -11,21 +11,29 @@
 
   &__discription {
     &_box {
-      @apply bg-mainBG rounded mx-auto;
+      @apply bg-mainBG rounded mx-auto my-3;
     }
 
-    @apply text-center mx-auto p-3;
+    @apply text-start p-3;
   }
 }
 
 .half {
-  @apply w-11/12 mx-auto;
+  @apply w-11/12 mx-auto max-h-full;
 }
 
 .half2 {
-  @apply w-11/12 mx-auto h-full flex flex-col justify-around;
+  @apply h-full flex flex-col justify-around;
 }
 
 .finalLink {
   @apply border-mainBorder outline-1 text-center w-fit mx-auto p-2.5 rounded-lg cursor-pointer bg-mainBG hover:bg-mainBG2 duration-300 hover:outline;
+}
+
+.button {
+  @apply border rounded bg-mainBG2 border-mainBorder p-2 my-2 hover:bg-mainBG duration-500 cursor-pointer;
+
+  &__zone {
+    @apply w-1/3 flex flex-col items-center;
+  }
 }

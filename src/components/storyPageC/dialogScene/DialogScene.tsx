@@ -27,7 +27,7 @@ const DialogScene: React.FC<IDialogScene> = ({ page, setPage }) => {
     >
       {page !== sentences.length ? (
         <>
-          <LeftButtons setReplic={setPage} />
+          <LeftButtons replic={page} setReplic={setPage} />
           <DialogPerson
             position={sentences[page].position}
             person={sentences[page].image}

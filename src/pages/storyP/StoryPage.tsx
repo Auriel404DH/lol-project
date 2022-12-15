@@ -5,13 +5,18 @@ import FirstSceneStory from '../../components/storyPageC/firstSceneStory/FirstSc
 const StoryPage = () => {
   const [start, setStart] = React.useState<boolean>(false);
   const [replic, setReplic] = React.useState<number>(0);
-
-  console.log(replic);
+  const userPage = localStorage.getItem('replic');
 
   return (
     <>
       {!start ? (
-        <FirstSceneStory setPage={setReplic} page={replic} start={start} setStart={setStart} />
+        <FirstSceneStory
+          userPage={Number(userPage)}
+          setPage={setReplic}
+          page={replic}
+          start={start}
+          setStart={setStart}
+        />
       ) : (
         <DialogScene setPage={setReplic} page={replic} />
       )}

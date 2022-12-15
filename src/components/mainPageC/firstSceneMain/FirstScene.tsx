@@ -2,12 +2,9 @@ import React from 'react';
 import test from '../../../assets/startWindow/test.png';
 import tornado from '../../../assets/startWindow/tornado.gif';
 import logoStart from '../../../assets/startWindow/logoStart.png';
-import hasageFight from '../../../assets/startWindow/hasageFight.png';
-import { HasagePlay } from '../../../assets/characters';
-import s from './firstScene.module.scss';
 import { useNavigate } from 'react-router-dom';
-import poro from "../../../assets/characters/poro.png"
-import poro2 from "../../../assets/characters/poro2.png"
+import { HasagePlay, HasageRun, Poro, Poro2 } from '../../../assets/characters';
+import s from './firstScene.module.scss';
 
 const FirstScene = () => {
   const navigate = useNavigate();
@@ -25,7 +22,7 @@ const FirstScene = () => {
 
   return (
     <div className={s.wrapper}>
-      <img className={s.hasage} src={hasageFight} alt="qwe" />
+      <img className={s.hasage} src={HasageRun} alt="qwe" />
       <img className={s.hasagePlay} src={HasagePlay} alt="qwe" />
       <img className={s.tornado} src={tornado} alt="qwe" />
 
@@ -42,8 +39,8 @@ const FirstScene = () => {
           Click here to read a story!
         </div>
         <div className={s.poroImg}>
-          <img src={poro} className={s.poroMove} alt="" />
-          <img src={poro2} className={s.poroStatic} alt="" />
+          <img src={Poro} className={s.poroMove} alt="" />
+          <img src={Poro2} className={s.poroStatic} alt="" />
         </div>
       </div>
     </div>
