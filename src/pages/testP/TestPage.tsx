@@ -6,6 +6,7 @@ import { QuestionAnswers } from '../../models/types';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import BgVideo from '../../components/mainPageC/bgVideo/BgVideo';
 import bg from '../../assets/bg/lol.mp4';
+import s from "./TestPage.module.scss"
 
 const TestPage = () => {
   const dispatch = useAppDispatch();
@@ -24,7 +25,7 @@ const TestPage = () => {
 
   return (
     <>
-      <div className="flex-1 flex z-50 relative">
+      <div className={s.wrapper}>
         <div>qwe</div>
         {step !== questionsCount ? (
           <FrameForTest
@@ -43,6 +44,7 @@ const TestPage = () => {
         <div>qwe</div>
       </div>
       <BgVideo bg={bg} />
+      <div className={s.blackout}></div>
     </>
   );
 };

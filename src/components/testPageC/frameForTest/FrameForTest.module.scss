@@ -1,18 +1,29 @@
 .frame {
-  @apply mx-auto mt-24 w-4/6 rounded-md border-2 border-mainBorder relative py-10 px-14 bg-mainBG;
+  @apply w-4/6 rounded-md border-2 border-mainBorder relative py-10 px-14 bg-mainBG;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+
+  
 
   &__content-text {
     @apply relative text-start;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
   }
   &__list {
     // @apply mb-6 grid mx-auto grid-flow-col w-fit gap-4 items-center;
-    padding: 10px 70px;
+    align-content: center;
+    flex: 1 1 auto;
+    height: auto;
+    padding: 20px 70px;
     background-color: #170b2a;
     border-radius: 5px;
     margin-bottom: 10px;
     display: grid;
-    row-gap: 10px;
-
+    grid-auto-rows: min-content;
+    row-gap: 17px;
   }
 
   &__counter {
@@ -21,4 +32,7 @@
 }
 .question {
   @apply text-center mb-5 text-3xl;
+  letter-spacing: 3.5px;
+  word-spacing: 4px;
+  font-size: 33px;
 }

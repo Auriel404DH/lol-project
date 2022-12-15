@@ -3,7 +3,7 @@ import s from './icon.module.scss';
 
 const LeftArrow = ({ width, height }: IIcon) => {
   return (
-    <div className={s['btn-back']}>
+    <div className={`${s['btn-back']} ${s.btnArrow}`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
