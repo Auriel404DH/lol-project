@@ -7,31 +7,34 @@ import LastSceneStory from '../lastSceneStory/LastSceneStory';
 import cl from 'classnames';
 import s from './Dialog.module.scss';
 
-const DialogScene = () => {
-  const [replic, setReplic] = React.useState<number>(0);
+interface IDialogScene {
+  page: number;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+}
 
+const DialogScene: React.FC<IDialogScene> = ({ page, setPage }) => {
   const { sentences } = useAppSelector((state) => state.story);
 
   return (
     <div
       className={cl({
         [s.dialogScene]: true,
-        [s.firstBg]: sentences[replic] && sentences[replic].bg === 'ViegoFall',
-        [s.blackBg]: sentences[replic] && sentences[replic].bg === 'Black',
-        [s.winterHome]: sentences[replic] && sentences[replic].bg === 'winterHome',
-        [s.homeInside]: sentences[replic] && sentences[replic].bg === 'homeInside',
+        [s.firstBg]: sentences[page] && sentences[page].bg === 'ViegoFall',
+        [s.blackBg]: sentences[page] && sentences[page].bg === 'Black',
+        [s.winterHome]: sentences[page] && sentences[page].bg === 'winterHome',
+        [s.homeInside]: sentences[page] && sentences[page].bg === 'homeInside',
       })}
     >
-      {replic !== sentences.length ? (
+      {page !== sentences.length ? (
         <>
-          <LeftButtons setReplic={setReplic} />
+          <LeftButtons setReplic={setPage} />
           <DialogPerson
-            position={sentences[replic].position}
-            person={sentences[replic].image}
-            name={sentences[replic].name}
-            text={sentences[replic].text}
+            position={sentences[page].position}
+            person={sentences[page].image}
+            name={sentences[page].name}
+            text={sentences[page].text}
           />
-          <RightButtons replic={replic} setReplic={setReplic} />
+          <RightButtons replic={page} setReplic={setPage} />
         </>
       ) : (
         <LastSceneStory />

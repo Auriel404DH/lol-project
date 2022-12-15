@@ -6,7 +6,7 @@ import { QuestionAnswers } from '../../models/types';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import BgVideo from '../../components/mainPageC/bgVideo/BgVideo';
 import bg from '../../assets/bg/lol.mp4';
-import s from "./TestPage.module.scss"
+import s from './TestPage.module.scss';
 
 const TestPage = () => {
   const dispatch = useAppDispatch();

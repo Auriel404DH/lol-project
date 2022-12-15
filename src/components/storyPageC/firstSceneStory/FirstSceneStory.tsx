@@ -1,27 +1,38 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import s from './firstScene.module.scss';
 
-const FirstSceneStory = ({
-  setStart,
-  start,
-}: {
+interface IFirstSceneStory {
+  page: number;
   start: boolean;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
   setStart: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
+}
+
+const FirstSceneStory: React.FC<IFirstSceneStory> = ({ setStart, start, page, setPage }) => {
+  const navigate = useNavigate();
+  
+  const navigateToMainMenu = () => navigate('/');
+
+  const setUserLastPage = () => {
+    setStart(!start);
+    setPage(page);
+  };
+
   return (
-    <>
-      <div
-        onClick={() => setStart(!start)}
-        className="fixed cursor-pointer flex items-center text-4xl rounded-2xl border-2 border-mainBorder justify-center w-3/6 h-1/6 left-96 top-48 bg-mainBG2 z-50"
-      >
-        <div>Click here to start</div>
+    <div className={s.wrapper}>
+      <div>
+        <div onClick={() => setStart(!start)} className={s.startButton}>
+          Start
+        </div>
+        <div onClick={() => setUserLastPage()} className={s.continueButton}>
+          Continue
+        </div>
+        <div onClick={() => navigateToMainMenu()} className={s.exitButton}>
+          Exit
+        </div>
       </div>
-      <div
-        onClick={() => setStart(!start)}
-        className="relative cursor-pointer flex items-center text-4xl rounded-2xl border-2 border-mainBorder justify-center p-6 w-2/6 h-1/6 mx-auto top-96 bg-mainBG2 z-50"
-      >
-        <div>Click here to start</div>
-      </div>
-    </>
+    </div>
   );
 };
 
