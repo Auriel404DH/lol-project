@@ -2,9 +2,48 @@
   @apply fixed top-0 left-0 h-screen w-screen z-50 font-ubuntuMedium;
   transition-duration: 1000ms;
 }
-
+.alertButtons{
+  background-color: rgba(0, 0, 0, 0.493);
+  padding: 10px 0;
+  align-items: center;
+}
+.poroImg{
+  order: 2;
+  img{
+    height: 50px;
+    width: 50px;
+    transform-origin: center;
+  }
+  .poroMove{
+    display: none;
+  }
+}
+.btnTest{
+  order: 1;
+  &:hover ~ .poroImg .poroMove{
+    display: block;
+    transform: rotateY(180deg);
+    animation: poroTest 1s forwards;
+  }
+  &:hover ~ .poroImg .poroStatic{
+      display: none;
+  }
+}
+.btnStory{
+  order: 3;
+  &:hover ~ .poroImg .poroMove{
+    display: block;
+    animation: poroStory 1s forwards;
+  }
+  &:hover ~ .poroImg .poroStatic{
+      display: none;
+  }
+}
 .buttonTest {
   @apply border-2 rounded p-5 bg-mainBG2 border-mainBorder opacity-0 cursor-pointer hover:bg-mainBG duration-300;
+  &:hover{
+    box-shadow: inset 0px 0px 20px 3px #957d00,0px 0px 20px 3px #957d00;
+  }
   -ms-user-select: none;
   -moz-user-select: none;
    -khtml-user-select: none;
@@ -49,7 +88,7 @@
 }
 
 .hasagePlay {
-  @apply z-50 absolute top-20 opacity-0;
+  @apply z-50 absolute top-24 opacity-0;
   animation: hasagePlay 0.6s ease-in-out;
   animation-delay: 5.6s;
   animation-fill-mode: forwards;
@@ -158,5 +197,45 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes poroTest {
+  0%{
+    transform: rotateZ(0) rotateY(180deg) translate(0);
+  }
+  20%{
+    transform: rotateZ(3deg) rotateY(180deg) translate(40px);
+  }
+  40%{
+    transform: rotateZ(0deg) rotateY(180deg) translate(80px);
+  }
+  60%{
+    transform: rotateZ(3deg) rotateY(180deg) translate(120px);
+  }
+  80%{
+    transform: rotateZ(0deg) rotateY(180deg) translate(160px);
+  }
+  100%{
+    transform: rotateZ(0) rotateY(180deg) translate(200px);
+  }
+}
+@keyframes poroStory {
+  0%{
+    transform: rotateZ(0) translate(0);
+  }
+  20%{
+    transform: rotateZ(3deg) translate(40px);
+  }
+  40%{
+    transform: rotateZ(0deg) translate(80px);
+  }
+  60%{
+    transform: rotateZ(3deg) translate(120px);
+  }
+  80%{
+    transform: rotateZ(0deg) translate(160px);
+  }
+  100%{
+    transform: rotateZ(0) translate(200px);
   }
 }
