@@ -40,15 +40,22 @@
   }
 }
 .buttonTest {
-  @apply border-2 rounded p-5 bg-mainBG2 border-mainBorder opacity-0 cursor-pointer hover:bg-mainBG duration-300;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: box-shadow .3s;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   -ms-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 
+
   &:hover {
     box-shadow: inset 0px 0px 20px 3px #957d00, 0px 0px 20px 3px #957d00;
+    border: 2px solid #957d00;
+    background-color: rgba(0, 0, 0, 0.348);
   }
 }
 

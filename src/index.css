@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 @font-face {
   font-family: 'UbuntuMedium';
   src: url('./fonts/Ubuntu-Medium.ttf');

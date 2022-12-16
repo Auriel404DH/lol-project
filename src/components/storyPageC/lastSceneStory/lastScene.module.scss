@@ -21,19 +21,26 @@
 }
 
 .buttons {
-  @apply absolute right-0 top-16;
+
 }
 
 .buttonsBlock {
-  @apply my-auto mr-24 rounded-xl w-fit bg-mainBG2 border-mainBorder border-2 py-8;
+  @apply rounded-xl w-fit bg-mainBG2 border-mainBorder border-2 py-8;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .startButton {
-  @apply relative mx-auto cursor-pointer flex items-center text-4xl rounded-2xl mb-9  justify-center  z-50;
+  @apply mx-auto cursor-pointer flex items-center text-4xl rounded-2xl mb-9  justify-center  z-50;
   width: 300px;
 }
 
 .exitButton {
-  @apply relative cursor-pointer flex items-center text-xl rounded-2xl border-2 border-mainBorder justify-center py-1 mx-auto bg-mainBG z-50;
+  @apply cursor-pointer flex items-center text-xl rounded-2xl border-2 border-mainBorder justify-center py-1 mx-auto bg-mainBG z-50;
   width: 100px;
 }
