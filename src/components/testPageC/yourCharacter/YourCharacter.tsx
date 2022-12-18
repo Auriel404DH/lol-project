@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { IYourCharacter } from '../../../models/IYourCharacter';
 import { userCharacter } from '../../../store/actions/userCharacter';
 import { removeAnswers } from '../../../store/slices/answersSlice';
-import InfoCharacter from '../infoCharacter/InfoCharacter';
+import { InfoCharacter } from '../';
 
 import s from './character.module.scss';
 

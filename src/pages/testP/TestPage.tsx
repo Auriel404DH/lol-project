@@ -1,6 +1,5 @@
 import React from 'react';
-import FrameForTest from '../../components/testPageC/frameForTest/FrameForTest';
-import ResultWindow from '../../components/testPageC/resultWindow/ResultWindow';
+import { FrameForTest, ResultWindow } from '../../components/testPageC';
 import { fetchCharacters } from '../../store/actions/CharactersAction';
 import { QuestionAnswers } from '../../models/types';
 import { useAppDispatch, useAppSelector } from '../../hooks';

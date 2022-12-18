@@ -1,7 +1,5 @@
 import React from 'react';
-import test from '../../../assets/startWindow/test.png';
-import tornado from '../../../assets/startWindow/tornado.gif';
-import logoStart from '../../../assets/startWindow/logoStart.png';
+import { test, tornado, logoStart } from '../../../assets/startWindow';
 import { useNavigate } from 'react-router-dom';
 import { HasagePlay, HasageRun, Poro, Poro2 } from '../../../assets/characters';
 import s from './firstScene.module.scss';

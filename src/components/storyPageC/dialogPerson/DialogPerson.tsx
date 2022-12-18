@@ -1,6 +1,6 @@
 import React from 'react';
 import { IDialogPerson } from '../../../models/IDialogPerson';
-import DialogTextArea from '../dialogTextArea/DialogTextArea';
+import { DialogTextArea } from '../';
 import s from './DialogPerson.module.scss';
 import cl from 'classnames';
 

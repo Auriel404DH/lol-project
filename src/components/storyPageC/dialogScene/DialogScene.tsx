@@ -1,9 +1,6 @@
 import React from 'react';
-import DialogPerson from '../dialogPerson/DialogPerson';
 import { useAppSelector } from '../../../hooks';
-import LeftButtons from '../buttons/LeftButtons';
-import RightButtons from '../buttons/RightButtons';
-import LastSceneStory from '../lastSceneStory/LastSceneStory';
+import { LeftButtons, RightButtons, LastSceneStory, DialogPerson } from '../';
 import cl from 'classnames';
 import s from './Dialog.module.scss';
 

@@ -1,3 +1,4 @@
-import DialogPerson from '../storyPageC/dialogPerson/DialogPerson';
+import FirstScene from './firstSceneMain/FirstScene';
+import BgVideo from './bgVideo/BgVideo';
 
-export { DialogPerson };
+export { BgVideo, FirstScene };

@@ -1,6 +1,5 @@
 import React from 'react';
-import BgVideo from '../../components/mainPageC/bgVideo/BgVideo';
-import FirstScene from '../../components/mainPageC/firstSceneMain/FirstScene';
+import { BgVideo, FirstScene } from '../../components/mainPageC';
 import { useAppDispatch } from '../../hooks';
 import bg from '../../assets/bg/lol.mp4';
 import s from './MainPage.module.scss';

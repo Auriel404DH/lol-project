@@ -1,9 +1,6 @@
 import React from 'react';
-import { useAppSelector } from '../../../hooks';
-import useFilter from '../../../hooks/useFilter';
-import PossibleCharacter from '../possibleCharacters/PossibleCharacter';
-import YourCharacter from '../yourCharacter/YourCharacter';
-import useUpdate from '../../../hooks/useUpdate';
+import { useAppSelector, useFilter, useUpdate } from '../../../hooks';
+import { PossibleCharacter, YourCharacter } from '../';
 import s from './result.module.scss';
 
 interface IResultWindow {

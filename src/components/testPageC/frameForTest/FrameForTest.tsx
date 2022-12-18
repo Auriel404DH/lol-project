@@ -2,9 +2,7 @@ import React from 'react';
 import { useAppDispatch } from '../../../hooks';
 import { IframeForTest } from '../../../models/IframeForTest';
 import { removeAnswers } from '../../../store/slices/answersSlice';
-import AnswerVariant from '../answerVariant/AnswerVariant';
-import ConfirmModal from '../confirmModal/ConfirmModal';
-import ControlButtons from '../controlButtons/ControlButtons';
+import { AnswerVariant, ConfirmModal, ControlButtons } from '../';
 import s from './FrameForTest.module.scss';
 
 const FrameForTest = ({
