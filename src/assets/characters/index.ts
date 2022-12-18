@@ -3,7 +3,7 @@ import Orn from './orn.png';
 import Reketon from './reketon.png';
 import WarWick from './ww.png';
 import Xayah from './Xayah_Render.png';
-import Hasage from './yasou.png';
+import HasagePlayNG from './yasou_play_NG.png';
 import HasagePlay from './yasou_play.png';
 import Gwen from './gwen.png';
 import Viego from './viego.png';
@@ -11,7 +11,7 @@ import Senna from './senna.png';
 import Lucian from './lucian.png';
 import Black from './black.png';
 import allNG from './allNG.png';
-import CatNG from './catNG.jpg';
+import CatNG from './catNG.png';
 import GarenNG from './GarenNG.png';
 import GwenNG from './gwenNG.png';
 import LucianNG from './lucianNG.png';
@@ -22,11 +22,14 @@ import ViegoNG from './viegoNG.png';
 import VolibearNG from './VolibearNG.png';
 import HasageRun from './HasageRun.gif';
 import startStory from './startStory.png';
+import SennaNG from './sennaNG.png';
 import Poro from './poro.png';
 import Poro2 from './poro2.png';
-
+import YoneNG from './YoneNG.png';
 export {
   Poro,
+  YoneNG,
+  SennaNG,
   Poro2,
   startStory,
   VolibearNG,
@@ -45,7 +48,7 @@ export {
   Reketon,
   WarWick,
   Xayah,
-  Hasage,
+  HasagePlayNG,
   HasagePlay,
   Gwen,
   Senna,

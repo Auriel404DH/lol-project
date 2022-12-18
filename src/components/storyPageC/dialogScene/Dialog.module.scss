@@ -25,3 +25,33 @@
   @apply min-h-screen;
   background-size: cover;
 }
+
+.street {
+  background-image: url('../../../assets/bg/street.png');
+  @apply min-h-screen;
+  background-size: cover;
+}
+
+.libraryShop {
+  background-image: url('../../../assets/bg/libraryShop.png');
+  @apply min-h-screen;
+  background-size: cover;
+}
+
+.catShop {
+  background-image: url('../../../assets/bg/christmasShop.jpg');
+  @apply min-h-screen;
+  background-size: cover;
+}
+
+.samiraGift {
+  background-image: url('../../../assets/bg/SamiraGift.png');
+  @apply min-h-screen;
+  background-size: cover;
+}
+
+.reketonsGift {
+  background-image: url('../../../assets/bg/reketonsGift.png');
+  @apply min-h-screen;
+  background-size: cover;
+}

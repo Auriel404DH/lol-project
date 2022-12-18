@@ -23,6 +23,11 @@ const DialogScene: React.FC<IDialogScene> = ({ page, setPage }) => {
         [s.blackBg]: sentences[page] && sentences[page].bg === 'Black',
         [s.winterHome]: sentences[page] && sentences[page].bg === 'winterHome',
         [s.homeInside]: sentences[page] && sentences[page].bg === 'homeInside',
+        [s.street]: sentences[page] && sentences[page].bg === 'street',
+        [s.libraryShop]: sentences[page] && sentences[page].bg === 'libraryShop',
+        [s.catShop]: sentences[page] && sentences[page].bg === 'catShop',
+        [s.samiraGift]: sentences[page] && sentences[page].bg === 'samiraGift',
+        [s.reketonsGift]: sentences[page] && sentences[page].bg === 'reketonsGift',
       })}
     >
       {page !== sentences.length ? (
@@ -33,6 +38,10 @@ const DialogScene: React.FC<IDialogScene> = ({ page, setPage }) => {
             person={sentences[page].image}
             name={sentences[page].name}
             text={sentences[page].text}
+            secondImage={sentences[page].secondImage}
+            secondPosition={sentences[page].secondPosition}
+            secondPerson={sentences[page].secondPerson}
+            isSecondMain={sentences[page].isSecondMain}
           />
           <RightButtons replic={page} setReplic={setPage} />
         </>
