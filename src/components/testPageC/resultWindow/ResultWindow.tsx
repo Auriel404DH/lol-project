@@ -1,5 +1,5 @@
 import React from 'react';
-import {  useAppSelector } from '../../../hooks';
+import { useAppSelector } from '../../../hooks';
 import useFilter from '../../../hooks/useFilter';
 import PossibleCharacter from '../possibleCharacters/PossibleCharacter';
 import YourCharacter from '../yourCharacter/YourCharacter';

@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { IYourCharacter } from '../../../models/IYourCharacter';
 import { userCharacter } from '../../../store/actions/userCharacter';
 import { removeAnswers } from '../../../store/slices/answersSlice';
+import InfoCharacter from '../infoCharacter/InfoCharacter';
 
 import s from './character.module.scss';
 
@@ -36,12 +37,15 @@ const YourCharacter: React.FC<IYourCharacter> = ({ character, setPrevStep, setSt
     <>
       <div className={s.character}>
         <div className={s.button__zone}>
-          <button onClick={navigateToRead} className={s.button}>
-            Прочитать историю
-          </button>
-          <button onClick={navigateToTest} className={s.button}>
-            Пройти тест заново
-          </button>
+          <InfoCharacter champion={champion} />
+          <div className="text-center">
+            <button onClick={navigateToRead} className={s.button}>
+              Прочитать историю
+            </button>
+            <button onClick={navigateToTest} className={s.button}>
+              Пройти тест заново
+            </button>
+          </div>
         </div>
         <div className="w-1/3">
           <img className={s.half} src={AvatarLink} alt={champion?.name} />

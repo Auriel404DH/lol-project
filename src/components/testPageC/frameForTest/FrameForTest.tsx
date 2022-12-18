@@ -38,7 +38,7 @@ const FrameForTest = ({
   return (
     <div className={s.frame}>
       <h2 className={s.question}>{questionsTitle[step]}</h2>
-      <div className={s.frame__counter}>{questionCounter + 1}/9</div>
+      <div className={s.frame__counter}>Номер вопроса: {questionCounter + 1}</div>
       <div className={s['frame__content-text']}>
         <ul className={s.frame__list}>
           {questionsAnswers[step].map((el, i) => (
