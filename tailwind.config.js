@@ -17,7 +17,6 @@ module.exports = {
       },
       margin: {
         max: '790px',
-        checkpoint: '98px',
       },
       height: {
         photo: '500px',

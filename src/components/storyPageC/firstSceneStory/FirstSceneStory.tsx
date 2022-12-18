@@ -15,7 +15,6 @@ interface IFirstSceneStory {
 const FirstSceneStory: React.FC<IFirstSceneStory> = ({
   setStart,
   start,
-  page,
   setPage,
   userPage,
 }) => {
