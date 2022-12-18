@@ -1,6 +1,5 @@
 .frame {
-  @apply w-4/6 rounded-md border-2 border-mainBorder relative py-10 px-14 bg-mainBG;
-  margin: auto auto;
+  @apply w-4/6 rounded-md border-2 border-mainBorder relative py-10 px-14 bg-mainBG mt-16 mx-auto;
   display: flex;
   flex-direction: column;
 
