@@ -27,7 +27,7 @@ const useFilter = ({ userParams, characterParams }: IUseFilter) => {
     const userCharacter =
       otherChampions.length !== 1
         ? otherChampions.splice(index, 1)[0].id
-        : otherChampions.slice(0)[0].id;
+        : otherChampions.splice(0)[0].id;
 
     return { userCharacter, otherChampions };
   };
