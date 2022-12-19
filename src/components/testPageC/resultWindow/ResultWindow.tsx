@@ -23,6 +23,7 @@ const ResultWindow: React.FC<IResultWindow> = ({ setStep, setPrevStep }) => {
         <div className={s.yourCharacters}>Ваш персонаж:</div>
       </div>
       <YourCharacter setStep={setStep} setPrevStep={setPrevStep} character={userCharacter} />
+
       {otherChampions.length !== 1 && (
         <div>
           <div className={s.recs}>Возможно, вам так же подойдут:</div>

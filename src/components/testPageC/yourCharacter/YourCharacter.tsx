@@ -17,7 +17,6 @@ const YourCharacter: React.FC<IYourCharacter> = ({ character, setPrevStep, setSt
   }, [dispatch, character]);
 
   const { champion } = useAppSelector((state) => state.characters);
-  console.log(champion);
 
   const LinkCharacterToOfficial = `https://www.leagueoflegends.com/ru-ru/champions/${champion?.id.toLowerCase()}/`;
   const AvatarLink = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion?.id}_0.jpg`;
