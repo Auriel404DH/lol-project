@@ -1,7 +1,7 @@
 import { ICharacter } from './../models/ICharacter';
 
 const useUpdate = ({ champions }: { champions: ICharacter[] | [] }) => {
-  const newChampions = JSON.parse(JSON.stringify(champions));
+  const newChampions = champions !== undefined ? JSON.parse(JSON.stringify(champions)) : [];
 
   const juggerWarriors = [
     'aatrox',
