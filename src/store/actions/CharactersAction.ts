@@ -1,4 +1,3 @@
-import { ICharacter } from './../../models/ICharacter';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
